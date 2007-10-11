@@ -23,13 +23,15 @@ package com.mimswright.easing
 	    * 
 	    * @param timeElapsed The time since the tween began in milliseconds or frames.
 	    * @param duration The duration of the tween, in milliseconds or frames.
+	    * @param minimum The lowest value to generate
+	    * @param maximum The highest value to generate
 	    * @return percentage complete - between 0.0 and 1.0
 	    */  
-		public static function ease(timeElapsed:Number, duration:Number):Number{
+		public static function ease(timeElapsed:Number, duration:Number, minimum:Number = 0.0, maximum:Number = 1.0):Number{
 			if (timeElapsed >= duration && snapping == true) {
 				return 1;
 			}
-			return Math.random();
+			return Math.random() * (maximum + minimum) - minimum;
 		}
 	}
 }

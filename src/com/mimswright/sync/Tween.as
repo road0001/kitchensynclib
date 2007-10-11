@@ -56,11 +56,11 @@ package com.mimswright.sync
 		protected function get delta():Number {
 			return _toValue - _fromValue;
 		}
-		protected function set targetProperty(value:Number):void {
+		protected function set value(value:Number):void {
 			_target[_property] = value;
 		}
 		
-		protected function get targetProperty():Number {
+		protected function get value():Number {
 			return _target[_property];
 		}
 		
@@ -94,7 +94,7 @@ package com.mimswright.sync
 		 */
 		public function reset():void {
 			stop();
-			targetProperty = _fromValue;
+			value = _fromValue;
 		}
 		
 		/**
@@ -107,18 +107,18 @@ package com.mimswright.sync
 			if (startTimeHasElapsed) {
 				var timeElapsed:int = time.currentFrame - _startTime.currentFrame - _offset;
 				if (_fromValue == EXISTING_FROM_VALUE && timeElapsed <= 1) { 
-					_fromValue = targetProperty; 
+					_fromValue = value; 
 				}
 				var result:Number =  EasingUtil.call(_easingFunction, timeElapsed, _duration, _easingMod1, _easingMod2) * delta + _fromValue; 
 				
 				if (_snapToWholeNumber) { result = Math.round(result); }
 				
-				targetProperty = result;
+				value = result;
 
 				if (durationHasElapsed) {
 					// if snapToValue is set to true, the target property will be set to the target value 
 					// regardless of the results of the easing function.
-					if (_snapToValueOnComplete) { targetProperty = _toValue; }
+					if (_snapToValueOnComplete) { value = _toValue; }
 					complete();
 				}
 			}

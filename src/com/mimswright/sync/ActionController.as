@@ -2,7 +2,9 @@ package com.mimswright.sync
 {
 	/**
 	 * Executes a function within another AbstractSynchronizedAction when executed. This allows you to easily
-	 * control other actions within a sequence.
+	 * control other actions within a sequence. The accepted commands can be found in ActionControllerCommands.
+	 * 
+	 * @see ActionControllerCommands
 	 */
 	public class ActionController extends SynchronizedFunction
 	{
@@ -39,6 +41,16 @@ package com.mimswright.sync
 				break;
 				case ActionControllerCommands.KILL:
 					_func = function ():void { _target.kill(); this.kill(); };
+				break;
+				case ActionControllerCommands.RESET:
+					// RESET only appllies to Tweens so use stop() if the object isn't a Tween.
+					_func = function ():void { 
+						if (_target is Tween) { 
+							Tween(_target).reset();
+						} else { 
+							_target.stop(); 
+						} 
+					};
 				break;
 				
 				default:

@@ -49,12 +49,14 @@ package com.mimswright.easing
 		 * 
 		 * @param func - The function to call - Must be an Easing function.
 		 * @param steps - The number of results desired for the array.
+	     * @param mod1 - An optional modifier for the function. Used for tweens such as Back and Elastic.
+	     * @param mod2 - An optional modifier for the function. Used for tweens such as Elastic.
 		 * @return Array - An array with the results from the easing function over 'steps' iterations.
 		 */ 
-		public static function generateArray(func:Function, steps:int):Array {
+		public static function generateArray(func:Function, steps:int, mod1:Number = NaN, mod2:Number = NaN):Array {
 			var results:Array = new Array();
 			for (var i:int = 0; i < steps; i++) {
-				results.push(call(func,i, steps-1));
+				results.push(call(func,i, steps-1, mod1, mod2));
 			}
 			return results;
 		}
