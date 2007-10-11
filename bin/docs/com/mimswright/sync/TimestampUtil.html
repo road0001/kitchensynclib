@@ -39,7 +39,15 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 </tr>
 </table>
 <p></p>
-<p></p>
+  Provides helpful utility functions for working with Timestamp objects.
+  
+  <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Timestamp.html" target="">Timestamp</a>
+</div>
 <br>
 <hr>
 </div>
@@ -55,7 +63,8 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#add()">add</a>(timestampA:<a href="Timestamp.html">Timestamp</a>, timestampB:<a href="Timestamp.html">Timestamp</a>):<a href="../sync/Timestamp.html">Timestamp</a>
 </div>
-<div class="summaryTableDescription">[static]</div>
+<div class="summaryTableDescription">[static]
+   Adds the two timestamps and returns a new one that is the sum of the two times.</div>
 </td><td class="summaryTableOwnerCol">TimestampUtil</td>
 </tr>
 <tr class="">
@@ -63,7 +72,8 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <div class="summarySignature">
 <a class="signatureLink" href="#subtract()">subtract</a>(timestampA:<a href="Timestamp.html">Timestamp</a>, timestampB:<a href="Timestamp.html">Timestamp</a>):<a href="../sync/Timestamp.html">Timestamp</a>
 </div>
-<div class="summaryTableDescription">[static]</div>
+<div class="summaryTableDescription">[static]
+   Subtracts timestampB from timestampA and returns the difference of the two times.</div>
 </td><td class="summaryTableOwnerCol">TimestampUtil</td>
 </tr>
 </table>
@@ -82,7 +92,10 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function add(timestampA:<a href="Timestamp.html">Timestamp</a>, timestampB:<a href="Timestamp.html">Timestamp</a>):<a href="../sync/Timestamp.html">Timestamp</a></code><span class="label">Parameters</span>
+<code>public static function add(timestampA:<a href="Timestamp.html">Timestamp</a>, timestampB:<a href="Timestamp.html">Timestamp</a>):<a href="../sync/Timestamp.html">Timestamp</a></code><p>
+   Adds the two timestamps and returns a new one that is the sum of the two times.
+   
+   </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="20px"></td><td><code><span class="label">timestampA</span>:<a href="Timestamp.html">Timestamp</a></code></td>
@@ -98,7 +111,11 @@ showHideInherited();
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code><a href="../sync/Timestamp.html">Timestamp</a></code></td>
+<td width="20"></td><td><code><a href="../sync/Timestamp.html">Timestamp</a></code> &mdash; 
+                        the sum of timestampA and timestampB
+   
+                        
+                     </td>
 </tr>
 </table>
 </div>
@@ -109,23 +126,32 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function subtract(timestampA:<a href="Timestamp.html">Timestamp</a>, timestampB:<a href="Timestamp.html">Timestamp</a>):<a href="../sync/Timestamp.html">Timestamp</a></code><span class="label">Parameters</span>
+<code>public static function subtract(timestampA:<a href="Timestamp.html">Timestamp</a>, timestampB:<a href="Timestamp.html">Timestamp</a>):<a href="../sync/Timestamp.html">Timestamp</a></code><p>
+   Subtracts timestampB from timestampA and returns the difference of the two times.
+   
+   </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">timestampA</span>:<a href="Timestamp.html">Timestamp</a></code></td>
+<td width="20px"></td><td><code><span class="label">timestampA</span>:<a href="Timestamp.html">Timestamp</a></code> &mdash; - the timstamp to subtract from.
+   </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">timestampB</span>:<a href="Timestamp.html">Timestamp</a></code></td>
+<td width="20px"></td><td><code><span class="label">timestampB</span>:<a href="Timestamp.html">Timestamp</a></code> &mdash; - the ammount of time to subtract from timestampA.
+   </td>
 </tr>
 </table>
 <p></p>
 <span class="label">Returns</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20"></td><td><code><a href="../sync/Timestamp.html">Timestamp</a></code></td>
+<td width="20"></td><td><code><a href="../sync/Timestamp.html">Timestamp</a></code> &mdash; 
+                        the difference between timestampA and timestampB
+   
+                        
+                     </td>
 </tr>
 </table>
 </div>
