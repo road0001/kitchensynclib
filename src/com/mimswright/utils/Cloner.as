@@ -1,8 +1,6 @@
 package com.mimswright.utils
 {
     import flash.utils.ByteArray;
-    import flash.net.registerClassAlias;
-    import com.mimswright.sync.Tween;
 
     public class Cloner
     {
