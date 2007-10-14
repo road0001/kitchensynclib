@@ -10,6 +10,7 @@ Added minimum and maximum modifiers to Random.ease function.
 Cleaned up performance of some functions with sounds and groups.
 Changed Tween's 'targetProperty' getter and setter to 'value' 
 Made startTimeIsElapsed and durationIsElapsed public read-only properties.
+Moved some as3 library files to an externally linked library
 
 ===== v0.3.1 (2007.09.28) =====
 Moved code into a Flex Library Project (and moved demo to a seperate as3 project). Destroyed old repository.
