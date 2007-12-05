@@ -1,3 +1,4 @@
-#Easing functions. I'll explain these later. In the meantime, look at this demonstration!
+=Easing functions= 
+I'll explain these later. In the meantime, look at this demonstration!
 
 [http://mimswright.com/kitchensync/demo/easing Easing Demo]
