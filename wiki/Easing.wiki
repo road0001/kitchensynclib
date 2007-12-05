@@ -2,3 +2,58 @@
 I'll explain these later. In the meantime, look at this demonstration!
 
 [http://mimswright.com/kitchensync/demo/easing Easing Demo]
+
+KitchenSync contains the following easing functions. Some that you are probably familar with, others are new
+
+  * Linear
+
+=== Polynomial functions ===
+  * Quadratic X^2 (in)
+  * Quadratic X^2 (out)
+  * Quadratic X^2 (in/out)
+  * Cubic X^3 (in)
+  * Cubic X^3 (out)
+  * Cubic X^3 (in/out)
+  * Quartic X^4 (in)
+  * Quartic X^4 (out)
+  * Quartic X^4 (in/out)
+  * Quintic X^5 (in)
+  * Quintic X^5 (out)
+  * Quintic X^5 (in/out)
+  * *Sextic X^6 (in)*
+  * *Sextic X^6 (out)*
+  * *Sextic X^6 (in/out)*
+
+=== Other Math functions ===
+  * Exponential (in)
+  * Exponential (out)
+  * Exponential (in/out)
+  * Circular (in)
+  * Circular (out)
+  * Circular (in/out)
+  * Sine (in)
+  * Sine (out)
+  * Sine (in/out)
+	
+=== Elastic functions ===
+  * Back (in)
+  * Back (out)
+  * Back (in/out)
+  * Bounce (in)
+  * Bounce (out)
+  * Bounce (in/out)
+  * Elastic (in)
+  * Elastic (out)
+  * Elastic (in/out)
+		
+=== Oscillating functions ===
+  * *Sine*
+  * *Absolute Sine*
+  * *Sawtooth*
+  * *Triangle*
+  * *Pulse*
+
+=== Misc. functions ===
+  * *Random*
+  * *Stepped*
+  * *Averaged*
