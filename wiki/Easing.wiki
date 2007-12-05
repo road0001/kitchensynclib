@@ -3,11 +3,10 @@ I'll explain these later. In the meantime, look at this demonstration!
 
 [http://mimswright.com/kitchensync/demo/easing Easing Demo]
 
-KitchenSync contains the following easing functions. Some that you are probably familar with, others are new
-
-  * Linear
+KitchenSync contains the following easing functions. Most you are probably familiar with but there are some new ones in bold.
 
 === Polynomial functions ===
+  * Linear X^1
   * Quadratic X^2 (in)
   * Quadratic X^2 (out)
   * Quadratic X^2 (in/out)
