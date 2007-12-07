@@ -1,0 +1,3 @@
+The `SynchronizedFunction` class represents a function or method and any specified arguments that are to be called at a specified time or after some delay. Just pass in the function you want to call and any arguments. The function will be called when the action executes.
+
+Note that unlike earlier versions of !ActionScript, with AS3 there is no need to use a delegate to retain the scope of the function.
