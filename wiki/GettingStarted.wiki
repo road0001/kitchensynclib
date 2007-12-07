@@ -1,0 +1,1 @@
+I'll put better instructions here soon. The main thing you need to know is to start the [Synchronizer `Synchronizer`] by calling `Synchronizer.init(this);` from your application's main function. After that, just create new [AbstractSynchronizedAction actions] and call their `start()` method to get things rolling!
