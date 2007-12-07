@@ -7,6 +7,6 @@ The `AbstractSynchronizedActionGroup` class defines common characteristics of al
 
 http://www.mimswright.com/kitchensync/docs/img/actionGroups.png
 
-[Synchronized]
+[Sequence]
 [Parallel]
 [Staggered]
