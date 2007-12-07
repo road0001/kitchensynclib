@@ -12,3 +12,6 @@
     * take advantage of the power of !ActionScript 3.0 while using OOP best practices and design patterns and without requiring the Flex framework.
     * respond to the needs of developers with a rich set of features.
     * be a full-featured library for animation and timeline based actions.
+
+==Links==
+  * [GettingStarted Getting started]
