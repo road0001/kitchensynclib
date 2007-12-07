@@ -1,0 +1,7 @@
+Behind the scenes, a class called `Synchronizer` acts as a timing clock for all of the [AbstractSynchronizedAction synchronized action]. Each time an action starts, the `Synchronizer` adds it to a sort of virtual timeline.
+
+[http://www.mimswright.com/kitchensync/docs/img/virtualTimeline.png]
+
+_Fig - Sequencer assigns actions to a 'virtual timeline'._
+
+Most synchronized actions have two properties that control time. They are duration and offset. The duration is the time during which the [AbstractSynchronizedAction action] executes. Some actions, such as [SynchronizedFunction functions] and [SynchronizedDispatchEvent event dispatchers], have a duration of 0 meaning that they execute instantaneously and only once. The other property, offset, controls how much time will pass before the action will start to execute. Offset is synonymous with delay. Both properties start counting only after the action's `start()` method has been called.
