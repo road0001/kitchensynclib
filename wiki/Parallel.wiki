@@ -1,1 +1,1 @@
-With Parallel [groups], all actions within the group are executed simultaneously. Although they all start at the same time, they may end at different times.
+With Parallel [Groups groups], all actions within the group are executed simultaneously. Although they all start at the same time, they may end at different times.
