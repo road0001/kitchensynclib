@@ -16,3 +16,4 @@
 ==Links==
   * [GettingStarted Getting started]
   * [http://code.google.com/p/kitchensynclib/w/list?q=label:Actions Types of synchronized actions]
+  * [http://mimswright.com/kitchensync/docs/api/ API Reference]
