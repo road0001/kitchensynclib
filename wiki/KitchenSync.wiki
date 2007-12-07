@@ -15,4 +15,4 @@
 
 ==Links==
   * [GettingStarted Getting started]
-  * [http://code.google.com/p/kitchensynclib/w/list?q=label:Featured Types of synchronized actions]
+  * [http://code.google.com/p/kitchensynclib/w/list?q=label:Actions Types of synchronized actions]
