@@ -1,0 +1,1 @@
+A Staggered [Groups group] of actions will execute one after the other in a sequence however, the actions are separated by a specified time (e.g. 1 second) rather than the end of the previous action.
