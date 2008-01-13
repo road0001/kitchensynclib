@@ -1,0 +1,51 @@
+=Time units, time string parsing, and sync mode=
+[KitchenSync KitchenSync] supports multiple time units so that it might best fit your project's needs. 
+==Time Units==
+Currently, two types are supported and are stored in the enumeration class `TimeUnit` as static constant values...
+  * *`TimeUnit.MILLISECONDS`* - milliseconds
+  * *`TimeUnit.FRAMES`* - frames (based on the current framerate)
+Additionally there is a static variable for the default TimeUnit. This value will be used when one is not specified.
+  * *`TimeUnit.DEFAULT`* - the value for this variable will be used when another one isn't specified. The value of `DEFAULT` defaults to `TimeUnit.MILLISECONDS`.
+_Note: both time units support integer values only (no fractions)._
+===Setting the time unit for an action===
+All [AbstractSynchronizedAction actions] have a `timeUnit` property which accepts one of the `TimeUnit` values listed above. By default, `timeUnit` is set to `TimeUnit.DEFAULT`. The unit specified here will affect the `duration` and `offset` properties of the action as well as any other times (such as the `stagger` property of the [Staggered] class). Since the duration and offset are usually set in the constructor and the timeUnit isn't, you'll need to set the timeUnit outside of the constructor but before you start the action.
+{{{
+stage.frameRate = 30;
+var test:SynchronizedTrace = new SynchronizedTrace("One second has elapsed.", 30);
+test.timeUnit = TimeUnit.FRAMES;
+test.start();
+}}}
+But since this is somewhat of a pain in the ass, KitchenSync also includes a system for parsing time units from strings.
+==Parsing time strings==
+Because of some magic behind the scenes ([http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/TimeStringParser_en.html TimeStringParser_en]), KitchenSync is able to automatically parse time values based on a string value rather than an integer. When using the constructor for any of the actions in KitchenSync, try passing in an English language string with numbers and units such as "1.5 seconds" or "15min". 
+The following lines are all functionally equivelant...
+{{{
+new SynchronizedTrace("Five seconds have elapsed.", "5 seconds");
+new SynchronizedTrace("Five seconds have elapsed.", "5 sec");
+new SynchronizedTrace("Five seconds have elapsed.", "5 s");
+new SynchronizedTrace("Five seconds have elapsed.", "5000ms");
+new SynchronizedTrace("Five seconds have elapsed.", "5000 milliseconds");
+new SynchronizedTrace("Five seconds have elapsed.", "5000 msec");
+new SynchronizedTrace("Five seconds have elapsed.", "3 seconds, 2000 milliseconds");
+new SynchronizedTrace("Five seconds have elapsed.", "0.8333 minutes");
+}}}
+Additionally, all of these structures are supported.  
+  * "1 hour, 2 minutes, 3 seconds, 4 milliseconds"
+  * "1h2m3s4ms"
+  * "5sec,12fr"
+  * "300 frames"
+  * "1.25s"
+  * "5 milliseconds, 15mins, 6 hrs"
+  * "0.25 days"
+
+==Sync mode==
+Since the Flash Player's frame rate doesn't always stay true to its word, KitchenSync's actions includes a special sync mode. What this does is try to match the time set for the duration and offset to the actual number of milliseconds elapsed rather than the number of frames elapsed. That way, if there is an unusual slowdown, your actions will still happen at the time you asked them to! 
+Sync mode works regardless of the action's `timeUnit`. You can enable sync mode by setting the `sync` flag to `true` on your actions. In the following snippet, `synchedTween` should finish very nearly 5 seconds after `start()` is called while `tween` will occur after _5 * frameRate_ frames have elapsed (which may take more than 5 seconds).
+{{{
+var tween:Tween = new Tween(sprite1, "x", 500, 0, "5sec");
+tween.start();
+
+var synchedTween:Tween = new Tween(sprite2, "x", 500, 0, "5sec");
+synchedTween.sync = true;
+synchedTween.start();
+}}}
