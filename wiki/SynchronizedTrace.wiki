@@ -1,1 +1,6 @@
+#labels Actions
 =[http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/SynchronizedTrace.html API Reference for SynchronizedTrace]=
+
+`SynchronizedTrace` is a subclass of [SynchronizedFunction] that runs a trace() statement after a set delay (offset). 
+
+`new SynchronizedTrace(message:*, offset:* = 0)`
