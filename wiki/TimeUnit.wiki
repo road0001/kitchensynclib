@@ -40,7 +40,7 @@ Additionally, all of these structures are supported.
 
 ==Sync mode==
 Since the Flash Player's frame rate doesn't always stay true to its word, KitchenSync's actions includes a special sync mode. What this does is try to match the time set for the duration and offset to the actual number of milliseconds elapsed rather than the number of frames elapsed. That way, if there is an unusual slowdown, your actions will still happen at the time you asked them to! 
-Sync mode works regardless of the action's `timeUnit`. You can enable sync mode by setting the `sync` flag to `true` on your actions. In the following snippet, `synchedTween` should finish very nearly 5 seconds after `start()` is called while `tween` will occur after 5 * frameRate frames have elapsed (which may take more than 5 seconds).
+Sync mode works regardless of the action's `timeUnit`. You can enable sync mode by setting the `sync` flag to `true` on your actions. In the following snippet, `synchedTween` should finish very nearly 5 seconds after `start()` is called while `tween` will occur after `5 x frameRate` frames have elapsed (which may take more than 5 seconds).
 {{{
 var tween:Tween = new Tween(sprite1, "x", 500, 0, "5sec");
 tween.start();
