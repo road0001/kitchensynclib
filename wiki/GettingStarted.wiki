@@ -1,12 +1,27 @@
+#labels Featured
 =Getting Started=
-This document should help you get your first KitchenSync project going.
+This document should help you get your first [KitchenSync] project going.
 
-==Setting up the synchronizer==
-Before doing anything else, you'll first need to set up the Synchronizer. The Synchronizer is a utility that dispatches events at every frame and is used as the timing core of KitchenSync. To start the Synchronizer, use the static method `Synchronizer.initialize()` and pass in a reference to any `DisplayObject`. Don't forget to import `com.mimswright.sync.*`! The reference to the `DisplayObject` allows the Synchronizer to communicate with the `stage` so it can listen for events and get the current frame rate. You can also optionally set the frame rate if you want it to be something other than the default. I recommend doing this at the very beginning of your code in your main application file or in your document class.
+==Setting up the Synchronizer==
+Before doing anything else, you'll first need to set up the [Synchronizer]. The Synchronizer is a utility that dispatches events at every frame and is used as the timing core of KitchenSync. To start the Synchronizer, use the static method `Synchronizer.initialize()` and pass in a reference to any [http://livedocs.adobe.com/labs/flex3/langref/flash/display/DisplayObject.html `DisplayObject`]. Don't forget to import `com.mimswright.sync.*`! The reference to the `DisplayObject` allows the Synchronizer to communicate with the `stage` so it can listen for events and get the current frame rate. You can also optionally set the frame rate if you want it to be something other than the default. I recommend doing this at the very beginning of your code in your main application file or in your document class.
 
 {{{
 
-// code
+package {
+
+	import com.mimswright.sync.*;
+	
+	import flash.display.Sprite;
+	
+	public class KSTutorial extends Sprite
+	{
+		public function KitchenSyncDemoOld()
+		{
+			stage.frameRate = 30;
+			Synchronizer.initialize(this);
+		}
+	}
+}
 
 }}}
 
