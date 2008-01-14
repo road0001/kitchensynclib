@@ -46,7 +46,7 @@ new SynchronizedTrace("HELLO, WORLD ... Sorry I'm late!", 5000).start();
 ==[SynchronizedFunction Synchronized Functions==
 The previous code is a fairly straightforward example but it illustrates how you can use KitchenSync to execute an action at a specific time. The SynchronizedTrace class is actually a subclass of a much more broad action called SynchronizedFunction. This class allows you to run any function, with arguments, after a specified delay. 
 {{{
-new SynchronizedFunction(5000, sayHello, "world").start();
+new SynchronizedFunction(5000, sayHello, "world").start(); // Displays "Hello, world!" after 5 seconds.
 ...
 protected function sayHello(who:String):void {
 	trace("Hello, " + who + "!");
