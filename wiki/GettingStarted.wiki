@@ -29,7 +29,7 @@ package {
 
 After this, your Synchronizer is set. Since you don't need to register actions, you probably won't need to access it again but if you do, you can use `Synchronizer.getInstance()`.
 
-===Running your first SynchronizedAction===
+==Running your first [AbstractSynchronizedAction action]==
 To test that Synchronizer was set up properly, try running a simple script. For this, you'll use the [SynchronizedTrace] class which simply displays a trace statement after a set amount of time. 
 The first argument is the message to display. This is usually a string but you can also pass in an Object as you would with the `trace()` statement. If you pass in an object, the resutls of its `toString()` method will be displayed.
 The second argument is the _offset_, or delay, before the trace statement is displayed. The default [TimeUnit unit of time] for this is milliseconds so the number 5000 = 5 seconds.
@@ -41,4 +41,25 @@ message.start();
 This code will display the message `HELLO, WORLD ... Sorry I'm late!` after five seconds. If you don't need to keep a reference to the `SynchronizedTrace` object, you could also write this in a slightly more compact way like this...
 {{{
 new SynchronizedTrace("HELLO, WORLD ... Sorry I'm late!", 5000).start();
+}}}
+
+==[SynchronizedFunction Synchronized Functions==
+The previous code is a fairly straightforward example but it illustrates how you can use KitchenSync to execute an action at a specific time. The SynchronizedTrace class is actually a subclass of a much more broad action called SynchronizedFunction. This class allows you to run any function, with arguments, after a specified delay. 
+{{{
+new SynchronizedFunction(5000, sayHello, "world").start();
+...
+protected function sayHello(who:String):void {
+	trace("Hello, " + who + "!");
+}
+}}}
+
+===Getting results of a synchronized function===
+If the function called by a SynchronizedFunction object returns a result, that result will be stored in the SynchronizedFunction as an untyped object. To access it, use the `result` property.
+{{{
+var getSumFunc:SynchronizedFunction = new SynchronizedFunction(1000, getSum, 1, 2, 3, 4, 5);
+getSumFunc.start();
+
+// LATER....
+
+var sum:Number = Number(getSum.result); // 15
 }}}
