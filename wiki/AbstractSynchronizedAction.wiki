@@ -3,7 +3,7 @@
 KitchenSync is made up of several types of objects that perform some kind of function and are timed by the Synchronizer. These objects are called _actions_. All actions are subclasses of the abstract class `AbstractSynchronizedAction`. 
 
 ==Known descendants of AbstractSynchronizedAction==
-  * AbstractSynchronizedActionGroup
+  * [ActionGroups AbstractSynchronizedActionGroup]
   * ActionController
   * [Parallel]
   * [Sequence]
