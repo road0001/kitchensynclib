@@ -1,0 +1,2 @@
+#labels Actions
+This action simply waits for the duration specified then ends. It can be used for spacing out time in a [Sequence].
