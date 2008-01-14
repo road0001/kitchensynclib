@@ -4,7 +4,7 @@
 Currently, two types are supported and are stored in the enumeration class `TimeUnit` as static constant values...
   * *`TimeUnit.MILLISECONDS`* - milliseconds
   * *`TimeUnit.FRAMES`* - frames (based on the current framerate)
-Additionally there is a static variable for the default TimeUnit. This value will be used when one is not specified.
+Additionally there is a static variable for the default !TimeUnit. This value will be used when one is not specified.
   * *`TimeUnit.DEFAULT`* - the value for this variable will be used when another one isn't specified. The value of `DEFAULT` defaults to `TimeUnit.MILLISECONDS`.
 _Note: both time units support integer values only (no fractions)._
 ===Setting the time unit for an action===
