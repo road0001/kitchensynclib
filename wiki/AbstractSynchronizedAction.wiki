@@ -2,8 +2,6 @@
 =Actions=
 KitchenSync is made up of several types of objects that perform some kind of function and are timed by the Synchronizer. These objects are called _actions_. All actions are subclasses of the abstract class `AbstractSynchronizedAction`. 
 
-[http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/AbstractSynchronizedAction.html API Reference for AbstractSynchronizedAction]
-
 ==Known descendants of AbstractSynchronizedAction==
   * AbstractSynchronizedActionGroup
   * ActionController
@@ -18,3 +16,6 @@ KitchenSync is made up of several types of objects that perform some kind of fun
   * SynchronizedTrace
   * [Tween]
   * [Wait]
+
+==Related Links==
+  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/AbstractSynchronizedAction.html API Reference for AbstractSynchronizedAction]
