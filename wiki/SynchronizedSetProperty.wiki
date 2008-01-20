@@ -1,5 +1,5 @@
 #labels Actions
-SynchronizedAction to set a property for any object to a specified value after some delay.
+[AbstractSynchronizedAction SynchronizedAction] to set a property for any object to a specified value after some delay.
 
 ==Syntax==
 {{{
