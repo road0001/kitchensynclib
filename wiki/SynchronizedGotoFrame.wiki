@@ -1,0 +1,11 @@
+#labels Actions
+Action to tell a `MovieClip` object to play a specified frame.
+
+The syntax for the constructor is...
+{{{	
+new SynchronizedGotoFrame(offset:*, target:MovieClip, frameIdentifier:*);
+}}}
+With `target` being the MovieClip to play and `frameIdentifier` being a string or a frame number.
+
+==Links==
+  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/SynchronizedGotoFrame.html API for this class]
