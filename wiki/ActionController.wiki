@@ -1,29 +1,34 @@
 #labels Actions
 =Action Controllers and Commands=
-An action controller is a type of action that sends _commands_ to other [AbstractSynchronizedAction action] objects such as stop, start, or pause. The commands that can be executed are stored in the enumeration class `ActionControllerCommand`. They include...
-  * !ActionControllerCommand.KILL
-  * !ActionControllerCommand.PAUSE
-  * !ActionControllerCommand.RESET
-  * !ActionControllerCommand.START
-  * !ActionControllerCommand.STOP
-  * !ActionControllerCommand.UNPAUSE
-
-==Example==
-{{{
-// Draw a rectangle to use for demonstrations.
-var sprite:Sprite = new Sprite();
-sprite.graphics.beginFill(0);
-sprite.graphics.drawRect(0,0,20,20);
-addChild(sprite);
-
-// Tween the rectangle from 0 to 300 over 4 seconds.
-var tween:Tween = new Tween(sprite, "x", 300, 0, "4s", "0s", Cubic.easeInOut);
-// use action controllers to pause the tween at 2 seconds then unpause 1 second later.
-var pauseTween:ActionController = new ActionController(tween, ActionControllerCommand.PAUSE, "2s");
-var unpauseTween:ActionController = new ActionController(tween, ActionControllerCommand.UNPAUSE, "3s");
-// add all actions to a group and start the group.
-var group:Parallel = new Parallel(tween, pauseTween, unpauseTween);
-group.start();
+An action controller is a type of action that sends _commands_ to other [AbstractSynchronizedAction action] objects such as stop, start, or pause. The commands that can be executed are stored in the enumeration class `ActionControllerCommand`. They package
+{
+	import com.mimswright.easing.*;
+	import com.mimswright.sync.*;
+	
+	import flash.display.Sprite;
+	
+	public class ActionControllerDemo extends Sprite
+	{
+		public function ActionControllerDemo() {
+			Synchronizer.initialize(this);
+			
+			// Draw a rectangle to use for demonstrations.
+			var sprite:Sprite = new Sprite();
+			sprite.graphics.beginFill(0);
+			sprite.graphics.drawRect(0,0,20,20);
+			addChild(sprite);
+			
+			// Tween the rectangle from 0 to 300 over 4 seconds.
+			var tween:Tween = new Tween(sprite, "x", 300, 0, "4s", "0s", Cubic.easeInOut);
+			// use action controllers to pause the tween at 2 seconds then unpause 1 second later.
+			var pauseTween:ActionController = new ActionController(tween, ActionControllerCommand.PAUSE, "2s");
+			var unpauseTween:ActionController = new ActionController(tween, ActionControllerCommand.UNPAUSE, "3s");
+			// add all actions to a group and start the group.
+			var group:Parallel = new Parallel(tween, pauseTween, unpauseTween);
+			group.start();
+		}
+	}
+}
 }}}
 
 ==Related Links==
