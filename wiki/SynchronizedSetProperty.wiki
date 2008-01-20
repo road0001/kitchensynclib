@@ -12,6 +12,7 @@ new SynchronizedSetProperty(target:Object, key:String, value:*, offset:* = 0);
 `offset` - The delay before the action executes.
 
 ==Example==
+This example creates a text field and sets the text property after five seconds.
 {{{
 package {
 	import com.mimswright.sync.*;
