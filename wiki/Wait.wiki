@@ -1,2 +1,44 @@
 #labels Actions
-This action simply waits for the duration specified then ends. It can be used for spacing out time in a [Sequence].
+=Wait=
+==Summary==
+This [AbstractSynchronizedAction action] simply waits for the duration specified then ends. It can be used for spacing out time in a [Sequence].
+
+==Syntax==
+{{{
+new Wait(waitTime:*)
+}}}
+  * `waitTime` - The wait time (offset)
+
+==Example==
+Creates a [Sequence] that moves a square from left to right, uses Wait to pause for 2 seconds, then moves the square from right to left.
+{{{
+package
+{
+	import com.mimswright.easing.*;
+	import com.mimswright.sync.*;
+	
+	import flash.display.Sprite;
+	
+	public class WaitDemo extends Sprite
+	{
+		public function WaitDemo() {
+			Synchronizer.initialize(this);
+			
+			// Draw a rectangle to use for demonstrations.
+			var sprite:Sprite = new Sprite();
+			sprite.graphics.beginFill(0);
+			sprite.graphics.drawRect(0,0,20,20);
+			addChild(sprite);
+			
+			// Tween the rectangle from 0 to 300 over 4 seconds.
+			var tween:Tween = new Tween(sprite, "x", 300, 0, "3s", "0s", Cubic.easeInOut);
+			// Duplicate the tween in reverse.
+			var tween2:Tween = tween.cloneReversed();
+			
+			// add a 2 second pause after the square moves before returning it back to it's start position.
+			var group:Sequence = new Sequence(tween, new Wait("2s"), tween2);
+			group.start();
+		}
+	}
+}
+}}}
