@@ -1,6 +1,11 @@
 #labels Actions
 =Action Controllers and Commands=
-An action controller is a type of action that sends _commands_ to other [AbstractSynchronizedAction action] objects such as stop, start, or pause. The commands that can be executed are stored in the enumeration class `ActionControllerCommand`. They package
+An action controller is a type of action that sends _commands_ to other [AbstractSynchronizedAction action] objects such as stop, start, or pause. The commands that can be executed are stored in the enumeration class `ActionControllerCommand`. They 
+
+==Example==
+The following example will pause a [Tween tween] partway through its execution and then unpause it after one second using two !ActionControllers.
+{{{
+package
 {
 	import com.mimswright.easing.*;
 	import com.mimswright.sync.*;
