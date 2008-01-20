@@ -1,2 +1,2 @@
-#labels Actions
+#labels Actions,Incomplete-Example,Incomplete-MoreDetails
 This class represents a sound that is to be played at a specified time or after some delay. The constructor will accept a `Sound` object, `URLRequest` object, or a URL as a string.
