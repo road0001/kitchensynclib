@@ -11,10 +11,10 @@ An ActionScript 3.0 Event can be dispatched after a delay or as part of a sequen
 new SynchronizedDispatchEvent(event:*, target:IEventDispatcher, offset = 0, ... listeners:*)
 Constructor.
 }}}
-`event` - Can be either an `Event` object or a `String`. If event is an `Event`, that object is used. If event is a string, a new `Event` with that type is automatically created.
-`target` - The `!IEventDispatcher` that will dispatch the event. The default is this.
-`offset` - time to wait before execution
-`listeners` - Any additional objects passed in will be added as listeners (if they're functions)
+  * `event` - Can be either an `Event` object or a `String`. If event is an `Event`, that object is used. If event is a string, a new `Event` with that type is automatically created.
+  * `target` - The `!IEventDispatcher` that will dispatch the event. The default is this.
+  * `offset` - time to wait before execution
+  * `listeners` - Any additional objects passed in will be added as listeners (if they're functions)
 
 ==Related Links==
   * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/SynchronizedDispatchEvent.html API Reference]
