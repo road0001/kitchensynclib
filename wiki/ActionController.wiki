@@ -8,6 +8,15 @@ An action controller is a type of action that sends _commands_ to other [Abstrac
   * !ActionControllerCommand.STOP
   * !ActionControllerCommand.UNPAUSE
 
+==Syntax==
+{{{
+new ActionController(target:AbstractSynchronizedAction, command:ActionControllerCommand, offset:*);
+}}}
+  * `target` - the [AbstractSynchronizedAction] that will receive the commands from the controller.
+  * `command` - the function that the [AbstractSynchronizedAction SynchronizedAction] will perform when the ActionController executes.
+  * `offset` - the delay before the action executes
+
+
 ==Example==
 The following example will pause a [Tween tween] partway through its execution and then unpause it after one second using two !ActionControllers.
 {{{
