@@ -1,2 +1,14 @@
-#labels Actions
+#labels Actions,Incomplete-Example
+==Summary==
 A Staggered [ActionGroups group] of actions will execute one after the other in a sequence however, the actions are separated by a specified time (e.g. 1 second) rather than the end of the previous action.
+
+==Syntax==
+{{{
+new Staggered(stagger:*, ... children)
+}}}
+  * `stagger` - The time to wait between each child's execution. Can be an integer or a string which follows the [TimeUnit#Parsing_time_strings time parsing rules].
+  * `children` - The remaining parameters are added as child actions (if they are AbstractSynchronizedAction instances)
+
+==Related Links==
+  * [AbstractSynchronizedActionGroup]
+  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/Staggered.html API Reference]
