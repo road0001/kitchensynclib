@@ -1,2 +1,2 @@
-#labels Actions
+#labels Actions,Incomplete-MoreDetails,Incomplete-Example
 With Parallel [ActionGroups groups], all actions within the group are executed simultaneously. Although they all start at the same time, they may end at different times.
