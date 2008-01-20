@@ -6,10 +6,10 @@
 new SynchronizedSetProperty(target:Object, key:String, value:*, offset:* = 0);
 }}}
 
-`target` - The object whose property you want to modify.
-`key` - The name of the property to modify.
-`value` - The new value of the property.
-`offset` - The delay before the action executes.
+  * `target` - The object whose property you want to modify.
+  * `key` - The name of the property to modify.
+  * `value` - The new value of the property.
+  * `offset` - The delay before the action executes.
 
 ==Example==
 This example creates a text field and sets the text property after five seconds.
