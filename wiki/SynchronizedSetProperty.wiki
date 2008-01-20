@@ -1,0 +1,41 @@
+#labels Actions
+SynchronizedAction to set a property for any object to a specified value after some delay.
+
+==Syntax==
+{{{
+new SynchronizedSetProperty(target:Object, key:String, value:*, offset:* = 0);
+}}}
+
+`target` - The object whose property you want to modify.
+`key` - The name of the property to modify.
+`value` - The new value of the property.
+`offset` - The delay before the action executes.
+
+==Example==
+{{{
+package {
+	import com.mimswright.sync.*;
+	import flash.display.*;
+	import flash.text.*;
+
+	public class SetPropertyDemo extends Sprite
+	{
+		public function SetPropertyDemo()
+		{
+			Synchronizer.initialize(this);
+			
+			var info:TextField = new TextField();
+			info.autoSize = TextFieldAutoSize.LEFT;
+			info.text = "Loading, please wait.";
+			addChild(info);
+			
+			var showCompleteAction:SynchronizedSetProperty = new SynchronizedSetProperty(info, "text", "Loading Complete!", "5 seconds");
+			showCompleteAction.start();
+		}
+	}
+}
+}}}
+
+==Links==
+  * [AbstractSynchronizedAction]
+  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/SynchronizedSetProperty.html API Reference]
