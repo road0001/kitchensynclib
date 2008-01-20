@@ -5,9 +5,9 @@ The syntax for the constructor is...
 {{{	
 new SynchronizedGotoFrame(offset:*, target:MovieClip, frameIdentifier:*);
 }}}
-`offset` - delay before executing
-`target` - the !MovieClip to play
-`frameIdentifier` - a string or a frame number
+  * `offset` - delay before executing
+  * `target` - the !MovieClip to play
+  * `frameIdentifier` - a string or a frame number
 
 ==Links==
   * [AbstractSynchronizedAction]
