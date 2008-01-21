@@ -165,7 +165,7 @@ package {
 }}}
 An important thing to remember about groups is that they are actions themselves. That means they can be started, stopped, paused, unpaused, and best of all, added to other groups. 
 
-Let's add a [Parallel] group to the [Sequence] to change the size. A Parallel group executes all the child actions inside simultaneously.
+Let's add a [Parallel] group to the [Sequence] to change the size. A Parallel group executes all the child actions inside simultaneously. This one scales up the box. Notice that the duration is slightly different on each and the easing function is Elastic.easeOut to make it wobble a bit.
 
 {{{
 var scaleUp:Parallel = new Parallel(
