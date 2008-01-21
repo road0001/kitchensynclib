@@ -1,10 +1,10 @@
-#labels Featured,Incomplete-MoreDetails,Incomplete-Example
+#labels Featured
 =Getting Started=
 This document should help you learn what you need to know to get your first [KitchenSync] project going.
 
 ==Setting up the [Synchronizer]==
 Before doing anything else, you'll first need to set up the `Synchronizer`. The `Synchronizer` is a utility that dispatches events at every frame and is used as the timing core of [KitchenSync]. To start the `Synchronizer`, use the static method `Synchronizer.initialize()` and pass in a reference to any [http://livedocs.adobe.com/labs/flex3/langref/flash/display/DisplayObject.html DisplayObject]. Don't forget to import `com.mimswright.sync.*`! The reference to the `DisplayObject` allows the Synchronizer to communicate with the `stage` so it can listen for events and get the current frame rate. You can also optionally set the frame rate if you want it to be something other than the default. I recommend doing this at the very beginning of your code in your main application file or in your document class.
-
+(for help with running these examples, check [http://mimswright.com/blog/?p=210 this post])
 {{{
 package {
 
@@ -179,3 +179,6 @@ sequence.addAction(scaleUp);
 // begin the sequence.
 sequence.start();
 }}}
+
+==Go Play!==
+There's much more you can do with KitchenSync. I hope to add more to this page but for now the best place to find information is on the other wiki pages or in the [API] reference. 
