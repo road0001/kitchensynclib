@@ -5,6 +5,17 @@ The `SynchronizedFunction` class represents a function or method and any specifi
 ==Syntax==
 *Note:* unlike earlier versions of !ActionScript, with AS3 there is no need to use a delegate to retain the scope of the function.
 
+===Getting results of a synchronized function===
+If the function called by a !SynchronizedFunction object returns a result, that result will be stored in the !SynchronizedFunction as an untyped object. To access it, use the `result` property.
+{{{
+var getSumFunc:SynchronizedFunction = new SynchronizedFunction(1000, getSum, 1, 2, 3, 4, 5);
+getSumFunc.start();
+
+// LATER....
+
+var sum:Number = Number(getSum.result); // 15
+}}}
+
 ==Links==
   * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/SynchronizedFunction.html API Reference]
   * [AbstractSynchronizedAction]
