@@ -1,12 +1,11 @@
-#labels Featured
+#labels Featured,Incomplete-MoreDetails
 =Getting Started=
-This document should help you get your first [KitchenSync] project going.
+This document should help you learn what you need to know to get your first [KitchenSync] project going.
 
 ==Setting up the [Synchronizer]==
 Before doing anything else, you'll first need to set up the `Synchronizer`. The `Synchronizer` is a utility that dispatches events at every frame and is used as the timing core of [KitchenSync]. To start the `Synchronizer`, use the static method `Synchronizer.initialize()` and pass in a reference to any [http://livedocs.adobe.com/labs/flex3/langref/flash/display/DisplayObject.html DisplayObject]. Don't forget to import `com.mimswright.sync.*`! The reference to the `DisplayObject` allows the Synchronizer to communicate with the `stage` so it can listen for events and get the current frame rate. You can also optionally set the frame rate if you want it to be something other than the default. I recommend doing this at the very beginning of your code in your main application file or in your document class.
 
 {{{
-
 package {
 
 	import com.mimswright.sync.*;
@@ -53,13 +52,12 @@ protected function sayHello(who:String):void {
 }
 }}}
 
-===Getting results of a synchronized function===
-If the function called by a SynchronizedFunction object returns a result, that result will be stored in the SynchronizedFunction as an untyped object. To access it, use the `result` property.
+For more info on [SynchronizedFunction SynchronizedFunctions], check the [SynchronizedFunction wiki page].
+
+Now, onto the good stuff...
+
+==Creating [Tweens]==
+A [Tween] is an animation be-tween two key points. 
 {{{
-var getSumFunc:SynchronizedFunction = new SynchronizedFunction(1000, getSum, 1, 2, 3, 4, 5);
-getSumFunc.start();
 
-// LATER....
-
-var sum:Number = Number(getSum.result); // 15
 }}}
