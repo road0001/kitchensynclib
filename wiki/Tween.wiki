@@ -14,6 +14,39 @@ new Tween(target:Object, property:String, toValue:Number, fromValue:Number = Twe
   * `offset` - the time to wait before starting the tween.
   * `easingFunction` - the function to use to interpolate the values between fromValue and toValue.
 
+==Example==
+This example creates a box then two tweens that move it to the right and down respectively.
+{{{
+package {
+	import com.mimswright.easing.*;
+	import com.mimswright.sync.*;
+	import flash.display.*;
+	
+	public class TweenDemo extends Sprite {
+		public function TweenDemo() {
+			// set framerate to 30 frames per second
+			stage.frameRate = 30;
+			// start the Synchronizer. You'll only need to do this once.
+			Synchronizer.initialize(this);
+		
+			// Draw a rectangle to use for demonstrations.
+			var sprite:Sprite = new Sprite();
+			sprite.graphics.beginFill(0);
+			sprite.graphics.drawRect(0,0,20,20);
+			addChild(sprite);
+			
+			// move the rectangle from left to right.
+			var tweenX:Tween = new Tween(sprite, "x", 300, 0, "3sec", "0sec", Cubic.easeInOut);
+			// apply the same animation to the y property.
+			var tweenY:Tween = tweenX.cloneWithTarget(sprite, "y");
+			
+			tweenX.start();
+			tweenY.start();
+		}
+	}
+}
+}}}
+
 ==Related Links==
   * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/Tween.html API Reference]
   * [AbstractSynchronizedAction]
