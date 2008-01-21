@@ -1,6 +1,13 @@
-#labels Actions
-=[http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/SynchronizedTrace.html API Reference for SynchronizedTrace]=
+#labels Actions,Incomplete-Example
+==Summary==
+`SynchronizedTrace` is a subclass of [SynchronizedFunction] that runs a `trace()` statement after a delay (offset). 
 
-`SynchronizedTrace` is a subclass of [SynchronizedFunction] that runs a `trace()` statement after a set delay (offset). 
+==Syntax==
+{{{
+new SynchronizedTrace(message:*, offset:* = 0)
+}}}
+  * `message` - The message to display in the output window.
+  * `offset` - The delay before the message is displayed.
 
-`new SynchronizedTrace(message:*, offset:* = 0)`
+==Links==
+[http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/SynchronizedTrace.html API Reference for SynchronizedTrace]
