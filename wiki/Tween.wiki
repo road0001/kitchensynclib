@@ -4,11 +4,11 @@ Perhaps the most used action is the Tween. A tween is an object that represents 
 
 ==Syntax==
 {{{
-new Tween(target:Object, property:String, toValue:Number, fromValue:Number = EXISTING_FROM_VALUE, duration:* = 0, offset:* = 0, easingFunction:Function = null);
+new Tween(target:Object, property:String, toValue:Number, fromValue:Number = Tween.EXISTING_FROM_VALUE, duration:* = 0, offset:* = 0, easingFunction:Function = null);
 }}}
   * `target` - the object whose property will be changed.
   * `property` - the name of the property to change. The property must be a Number, int or uint such as a `Sprite` object's "alpha"
-  * `toValue` - the target value to tween the property to.
+  * `toValue` - the value to tween the property to. After the tween is done, this will be the value of the property. (*Note:* The end value comes before the start value because the start value is optional)
   * `fromValue` - the starting value of the tween. By default, this is the value of the property before the tween.
   * `duration` - the time in frames that this tween will take to execute.
   * `offset` - the time to wait before starting the tween.
