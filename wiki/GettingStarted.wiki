@@ -163,3 +163,19 @@ package {
 	}
 }
 }}}
+An important thing to remember about groups is that they are actions themselves. That means they can be started, stopped, paused, unpaused, and best of all, added to other groups. 
+
+Let's add a [Parallel] group to the [Sequence] to change the size. A Parallel group executes all the child actions inside simultaneously.
+
+{{{
+var scaleUp:Parallel = new Parallel(
+	new Tween(sprite, "scaleX", 3.0, 1.0, "5s", 0, Elastic.easeOut),
+	new Tween(sprite, "scaleY", 3.0, 1.0, "6s", 0, Elastic.easeOut)
+);
+			
+// after adding other child actions but before starting the sequence, add the parallel group.
+sequence.addAction(scaleUp);
+
+// begin the sequence.
+sequence.start();
+}}}
