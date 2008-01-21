@@ -180,5 +180,7 @@ sequence.addAction(scaleUp);
 sequence.start();
 }}}
 
+[http://mimswright.com/kitchensync/demo/gettingstarted/ Click here to see the results of this code].
+
 ==Go Play!==
 There's much more you can do with KitchenSync. I hope to add more to this page but for now the best place to find information is on the other wiki pages or in the [API] reference. 
