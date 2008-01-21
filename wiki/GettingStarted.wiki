@@ -1,4 +1,4 @@
-#labels Featured,Incomplete-MoreDetails
+#labels Featured,Incomplete-MoreDetails,Incomplete-Example
 =Getting Started=
 This document should help you learn what you need to know to get your first [KitchenSync] project going.
 
@@ -52,12 +52,114 @@ protected function sayHello(who:String):void {
 }
 }}}
 
-For more info on [SynchronizedFunction SynchronizedFunctions], check the [SynchronizedFunction wiki page].
+For more info on [SynchronizedFunction SynchronizedFunctions], check the wiki page.
 
 Now, onto the good stuff...
 
 ==Creating [Tweens]==
 A [Tween] is an animation be-tween two key points. 
+Our first demo will first create a rectangle to play with. After that, we'll use a [Tween] object to move the rectangle from x=0 to x=300 over the course of 3 seconds.
 {{{
+package {
+	import com.mimswright.easing.*;
+	import com.mimswright.sync.*;
+	import flash.display.*;
+	
+	public class KSTutorial extends Sprite {
+		public function KSTutorial() {
+			// set framerate to 30 frames per second
+			stage.frameRate = 30;
+			// start the Synchronizer. You'll only need to do this once.
+			Synchronizer.initialize(this);
+			
+			// display a message after 5 seconds.
+			var message:SynchronizedTrace = new SynchronizedTrace("HELLO, WORLD ... Sorry I'm late!", 5000);
+			message.start();
+			
+			// Draw a rectangle to use for demonstrations.
+			var sprite:Sprite = new Sprite();
+			sprite.graphics.beginFill(0);
+			sprite.graphics.drawRect(0,0,20,20);
+			addChild(sprite);
+			
+			var tween:Tween = new Tween(sprite, "x", 300, 0, "3sec", "0sec", Cubic.easeInOut);
+			tween.start();
+		}
+	}
+}
+}}}
 
+Let's take a quick look at the syntax of the tween. 
+
+The first two are the target object and the name property to change (representing `sprite.x`). The target can be any object (except primatives) and the property can be any numeric property. 
+
+The next two are the end point and the start point. The sprite will be moved from 0 to 300 (*Note:* The end value comes before the start value because the start value is optional). 
+
+The next two are the duration and offset. These determine the time that the tween will take place. The first is the duration (3 seconds), the second is the offset, or delay, (0 seconds). Note that the time was entered using a string - to read more about that, check out the wiki page for [TimeUnit]. Once the `start()` method is called, the tween will wait for the `offset` time (in this case, 0 seconds) before it starts. After that, the tween will take 3 seconds to complete (unless it's paused or stopped).
+
+The final parameter is the [Easing easing function]. This determines the type of motion you'll see. Try playing around with different ones for various effects. For examples of different easing types, check the [http://mimswright.com/kitchensync/demo/easing/ Easing Demo] and the [Easing Easing wiki page]. Be sure you don't use parentheses when you add an easing function.
+
+Once it's set up, use the start() method to get things rolling.
+
+===Cloning a Tween===
+Since at this point you can only change one target/property at time with a Tween object (I'll be adding functionality for multiple targets/properties soon), I've added the ability to make a copy a tween. Let's replace the tween lines with one that modifies `x` then copy it to target `y` using `cloneWithTarget()`. This will cause the square to move diagonally since x and y are being tweened at the same time. 
+{{{
+var tweenX:Tween = new Tween(sprite, "x", 300, 0, "3sec", "0sec", Cubic.easeInOut);
+var tweenY:Tween = tweenX.cloneWithTarget(sprite, "y");
+tweenX.start();
+tweenY.start();
+}}}
+While all [AbstractSynchronizedAction AbstractSynchronizedActions] have a `clone()` method, Tweens support the `cloneWithTarget()` method as well as the `cloneReversed()` method which clones the tween with the start and end points switched.
+
+Now what if you wanted the box to move right _then_ move down instead of moving diagonally? You could set the offset for tweenY to 3 seconds so it waits until the tweenX is done before starting _OR_ you could use an [AbstractSynchronizedActionGroup action group]...
+
+==Creating a [AbstractSynchronizedActionGroup Group]==
+When working with multiple actions, it's often more convenient to combine them into groups  that can be treated as a single unit. These are called [ActionGroups action groups] and they extend the AbstractSynchronizedActionGroup class. 
+
+There are three kind of groups [Sequence], [Parallel], and [Staggered] (explained on the [ActionGroups groups wiki page]). Since we want the box to move right _then_ down, we'll use a [Sequence] group.
+
+The code below will create a new Sequence and add the x and y tweens using the constructor. Then we'll use the `addAction()` method and the `cloneReversed()` method to create the reversed animation back to the starting point
+{{{
+package {
+	import com.mimswright.easing.*;
+	import com.mimswright.sync.*;
+	
+	import flash.display.*;
+	
+	public class KSTutorial extends Sprite {
+		public function KSTutorial() {
+			// set framerate to 30 frames per second
+			stage.frameRate = 30;
+			// start the Synchronizer. You'll only need to do this once.
+			Synchronizer.initialize(this);
+			
+			// display a message after 5 seconds.
+			var message:SynchronizedTrace = new SynchronizedTrace("HELLO, WORLD ... Sorry I'm late!", 5000);
+			message.start();
+			
+			// Draw a rectangle to use for demonstrations.
+			var sprite:Sprite = new Sprite();
+			sprite.graphics.beginFill(0);
+			sprite.graphics.drawRect(0,0,20,20);
+			addChild(sprite);
+			
+			// move the rectangle from left to right.
+			var tweenX:Tween = new Tween(sprite, "x", 300, 0, "3sec", "0sec", Cubic.easeInOut);
+			// apply the same animation to the y property.
+			var tweenY:Tween = tweenX.cloneWithTarget(sprite, "y");
+			
+			// add the x and y tweens to a new sequence.
+			var sequence:Sequence = new Sequence(
+				tweenX,
+				tweenY
+			);
+			// why stop there... let's make the complete trip back to the starting point.
+			sequence.addAction(tweenX.cloneReversed());
+			sequence.addAction(tweenY.cloneReversed());
+			
+			// begin the sequence.
+			sequence.start();
+		}
+	}
+}
 }}}
