@@ -4,7 +4,8 @@ This document should help you learn what you need to know to get your first [Kit
 
 ==Setting up the [Synchronizer]==
 Before doing anything else, you'll first need to set up the `Synchronizer`. The `Synchronizer` is a utility that dispatches events at every frame and is used as the timing core of [KitchenSync]. To start the `Synchronizer`, use the static method `Synchronizer.initialize()` and pass in a reference to any [http://livedocs.adobe.com/labs/flex3/langref/flash/display/DisplayObject.html DisplayObject]. Don't forget to import `com.mimswright.sync.*`! The reference to the `DisplayObject` allows the Synchronizer to communicate with the `stage` so it can listen for events and get the current frame rate. You can also optionally set the frame rate if you want it to be something other than the default. I recommend doing this at the very beginning of your code in your main application file or in your document class.
-*Note:* All of the examples were built using an *ActionScript 3.0 project* in Adobe FlexBuilder 3 beta. If you're using KitchenSync for a _Flex_ project, be sure to read this page on [Using_KitchenSync_with_Flex using KitchenSync with Flex]. For help with setting up and running these examples in Flash CS3 or FlexBuilder, check [http://mimswright.com/blog/?p=210 this post].
+
+*Note:* All of the examples were built using an *!ActionScript 3.0 project* in Adobe !FlexBuilder 3 beta. If you're using KitchenSync for a _Flex_ project, be sure to read this page on [Using_KitchenSync_with_Flex using KitchenSync with Flex]. For help with setting up and running these examples in Flash CS3 or !FlexBuilder, check [http://mimswright.com/blog/?p=210 this post].
 {{{
 package {
 
