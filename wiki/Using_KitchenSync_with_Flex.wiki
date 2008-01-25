@@ -4,10 +4,9 @@ KitchenSync was designed to be a library for AS3 applications and was intentiona
 
 ==Tips==
   * Using the `creationComplete` or `initialize` events may cause you to get the following error. `Error: frameRateSeed must be a DisplayObject that is part of the Display List.` That is because the `Synchronize.initialize()` method must receive a DisplayList object that has been added to the display list to get a reference to the stage and that doesn't happen in the `creationComplete` or `initialize` events. Instead, use `addedToStage` to initialize the Synchronizer.
-  * Flex contains several classes with the same class names (but different package names) as the classes in KitchenSync. This is easily fixed by being sure to import `com.mimswright.sync.*` and `com.mimswright.easing.*`. When you attempt to use a class such as `Tween`, FlexBuilder should even ask you which package you want to import (pictured below). Make sure you choose the `com.mismwright` one. 
-[http://mimswright.com/kitchensync/docs/img/organizeImports.png]
   * In order to optimize performance, Flex components don't necessarily update on stage at the exact same time that you set a property such as 'x'. This may affect the performance of KitchenSync. To learn more about this, check out the [http://livedocs.adobe.com/labs/flex3/langref/mx/core/UIComponent.html#invalidateDisplayList() invalidateDisplayList() method] or read up on [http://livedocs.adobe.com/flex/201/html/wwhelp/wwhimpl/common/html/wwhelp.htm?context=LiveDocs_Book_Parts&file=Part1_intro_136_1.html#74609 creating custom components] for a full description.
-
+ * Flex contains several classes with the same class names (but different package names) as the classes in KitchenSync. This is easily fixed by being sure to import `com.mimswright.sync.*` and `com.mimswright.easing.*`. When you attempt to use a class such as `Tween`, FlexBuilder should even ask you which package you want to import (pictured below). Make sure you choose the `com.mismwright` one. 
+[http://mimswright.com/kitchensync/docs/img/organizeImports.png]
 ==Example==
 This example uses a listener for the `addedToStage` event to move a Canvas and rotate it.
 {{{
