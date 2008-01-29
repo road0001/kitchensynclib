@@ -1,4 +1,6 @@
 #labels Featured
+[http://mimswright.com/kitchensync/docs/img/KSToaster.jpg]
+
 =Getting Started=
 This document should help you learn what you need to know to get your first [KitchenSync] project going.
 
