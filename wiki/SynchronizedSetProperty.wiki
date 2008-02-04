@@ -1,4 +1,7 @@
+#summary An action to set any property of an object.
 #labels Actions
+
+==Summary==
 [AbstractSynchronizedAction SynchronizedAction] to set a property for any object to a specified value after some delay.
 
 ==Syntax==
