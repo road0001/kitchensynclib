@@ -16,6 +16,6 @@
 
 ==Links==
   * [GettingStarted Getting started]
-  * [http://code.google.com/p/kitchensynclib/w/list?q=label:Actions Types of synchronized actions]
+  * [Roadmap]
   * [TimeUnit Units of time, parsing time strings, and sync mode]
   * [http://mimswright.com/kitchensync/docs/api/ API Reference]
