@@ -1,3 +1,8 @@
+#summary An action group that executes its children one after the other.
 #labels Actions,Incomplete-MoreDetails,Incomplete-Example
-= Introduction =
+
+==Summary==
 In a `Sequence` [ActionGroups group], actions are executed one after the other in order. Delays in between individual actions within the group are still maintained and will begin counting when the action's turn in the sequence comes up.
+
+==Related Links==
+  * [ActionGroups AbstractSynchronizedActionGroup]
