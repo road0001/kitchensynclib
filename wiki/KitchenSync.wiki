@@ -9,12 +9,6 @@
 ==!KitchenSync is more than an animation library==
 !KitchenSync is more than an animation library. [Tween Tweens] are a major part of !KitchenSync but that is not the end. It also allows you to sequence [SynchronizedSound sounds], [SynchronizedFunction functions], and [SynchronizedDispatchEvent event dispatches] among other [AbstractSynchronizedAction actions]. The framework is open-ended allowing you to come up with new ways to work with the [Synchronizer virtual timeline].
 
-==!KitchenSync aims to...==
-    * offer a well-architected, extensible framework for working with time-based animations and events.
-    * take advantage of the power of !ActionScript 3.0 while using OOP best practices and design patterns and without requiring the Flex framework.
-    * respond to the needs of developers with a rich set of features.
-    * be a full-featured library for animation and timeline based actions.
-
 ==Links==
   * [GettingStarted Getting started]
   * [Roadmap]
