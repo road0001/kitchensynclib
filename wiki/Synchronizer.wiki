@@ -1,3 +1,6 @@
+#summary The main timing core for KitchenSync
+#labels Incomplete-Example
+
 Behind the scenes, a class called `Synchronizer` acts as a timing clock for all of the [AbstractSynchronizedAction synchronized action]. Each time an action starts, the `Synchronizer` adds it to a sort of virtual timeline.
 
 [http://www.mimswright.com/kitchensync/docs/img/virtualTimeline.png]
