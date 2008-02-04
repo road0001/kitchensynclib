@@ -1,0 +1,29 @@
+#labels Phase-Requirements
+What are the current and future goals of KitchenSync?
+
+==Goals==
+
+*KitchenSync aims to...*
+  * offer a well-architected, extensible framework for working with time-based animations and events.
+  * take advantage of the power of ActionScript 3.0 while using OOP best practices and design patterns ~~and without requiring the Flex framework~~.
+  * respond to the needs of developers with a rich set of features.
+  * be a full-featured library for animation and timeline based actions. 
+  * make thorough documentation as important as new functionality.
+
+Furthermore, this project was designed to be used by you the developer. Any ideas or suggestions from its users will be considered.
+
+===Version 1.0 *_Complete!_*===
+  * Set up core functionality.
+  * Tackle the most common needs of library users including tweens and timed functions.
+  * Release the library open source on Google Code.
+
+===Version 2.0===
+  * Analyze the other major tweening libraries in detail.
+  * Attempt to match the strongest features of the other libraries.
+  * Fix any outstanding bugs from version 1.0
+
+===Version 3.0 and beyond===
+  * There is a backlog of additional features that I hope to add in future versions.
+
+==Related Links==
+  * [ChangeLog]
