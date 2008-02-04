@@ -1,4 +1,6 @@
+#summary An action to call a function and retrieve its results.
 #labels Actions,Incomplete-Example
+
 ==Summary==
 The `SynchronizedFunction` class represents a function or method and any specified arguments that are to be called at a specified time or after some delay. Just pass in the function you want to call and any arguments. The function will be called when the action executes.
 
