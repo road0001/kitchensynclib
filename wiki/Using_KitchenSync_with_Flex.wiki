@@ -1,4 +1,6 @@
+#summary Help with getting KitchenSync set up to use with Flex projects.
 #labels Phase-Deploy
+
 =Using KitchenSync with Adobe Flex=
 KitchenSync was designed to be a library for AS3 applications and was intentionally made independent of the Flex framework. Flex contains its own libraries for animation. It also handles validation of children and the display list internally which can cause unexpected results when using KitchenSync. Officially, KitchenSync does not support use with Flex at this point, however, just because it's not officially supported doesn't mean it cannot be used. Here are some tips to help you out.
 
