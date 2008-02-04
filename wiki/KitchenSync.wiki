@@ -1,3 +1,4 @@
+#summary Overview of the project.
 [http://mimswright.com/kitchensync/docs/img/KSLogo.png]
 
 =!KitchenSync is an !ActionScript 3.0 library for sequencing animations and other time-based actions.=
