@@ -1,4 +1,6 @@
 #labels Actions,Incomplete-Example
+@summary Traces a message to the output window after some delay.
+
 ==Summary==
 `SynchronizedTrace` is a subclass of [SynchronizedFunction] that runs a `trace()` statement after a delay (offset). 
 
