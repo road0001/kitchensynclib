@@ -1,5 +1,5 @@
 #labels Phase-Requirements
-#The changelog keeps track of all the new changes to the library.
+The changelog keeps track of all the new changes to the library.
 
 The changelog can be found in the docs folder.
 
