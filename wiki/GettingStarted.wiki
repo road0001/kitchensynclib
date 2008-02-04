@@ -1,3 +1,4 @@
+#summary What you need to get started with KitchenSync
 #labels Featured
 [http://mimswright.com/kitchensync/docs/img/KSToaster.jpg]
 
