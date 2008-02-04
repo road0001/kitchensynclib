@@ -1,5 +1,5 @@
+#summary What are the current and future goals of KitchenSync?
 #labels Phase-Requirements
-What are the current and future goals of KitchenSync?
 
 ==Goals==
 
