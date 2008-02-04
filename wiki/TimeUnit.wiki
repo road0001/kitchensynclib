@@ -1,3 +1,4 @@
+#summary Information about time units, parsing time strings, and sync mode.
 =Time units, time string parsing, and sync mode=
 [KitchenSync KitchenSync] supports multiple time units so that it might best fit your project's needs. 
 ==Time Units==
