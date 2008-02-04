@@ -1,3 +1,5 @@
+#summary Functions used to interpolate motion between two points.
+
 =Easing functions= 
 Easing functions are mathematical functions that are used to interpolate values between two endpoints usually with non-linear results. That's a fancy way of saying that they determine the way something moves.
 
