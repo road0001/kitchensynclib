@@ -1,1 +1,2 @@
+#summary The abstract class for a group of child actions that are treated as a whole.
 =See [ActionGroups]=
