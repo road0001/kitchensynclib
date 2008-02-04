@@ -1,4 +1,6 @@
+#summary An action used to animate a numeric property of an object such as its position.
 #labels Actions
+
 ==Summary==
 Perhaps the most used action is the Tween. A tween is an object that represents a change of a property from one value to another over time. However, in most cases, the word tween is more likely to be synonymous with an animation be-*tween* two key points. A tween object has a target object (usually a display object) whose properties are affected, a target property, a duration, a start value and an end value. Tweens also use a special type of function, called an [Easing easing function], to determine the interpolation from the start to the ending values.
 
