@@ -1,4 +1,6 @@
+#summary An action to control playback of a movie clip.
 #labels Actions,Incomplete-Example
+
 [AbstractSynchronizedAction SynchronizedAction] to tell a `MovieClip` object to play a specified frame.
 
 The syntax for the constructor is...
