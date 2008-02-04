@@ -1,5 +1,5 @@
+#summary The Wait action is used to space out a sequence by some duration.
 #labels Actions
-@summary The Wait action is used to space out a sequence by some duration.
 =Wait=
 ==Summary==
 This [AbstractSynchronizedAction action] simply waits for the duration specified then ends. It can be used for spacing out time in a [Sequence].
