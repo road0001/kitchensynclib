@@ -1,5 +1,7 @@
+#summary Groups of actions that contain child actions and are themselves actions.
 #labels Actions
-= Introduction =
+
+= Summary =
 Action Groups are special types of [AbstractSynchronizedAction actions] that contain sets of other actions which can be controlled simultaneously. All action groups extend the `AbstractSynchronizedActionGroup` class. 
 
 = Details =
@@ -18,3 +20,7 @@ With all of the action groups, separate events are dispatched upon completion of
 
 ==Related Links==
   * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/AbstractSynchronizedActionGroup.html API Reference for AbstractSynchronizedActionGroup]
+  * [http://en.wikipedia.org/wiki/Composite_pattern Composite Design Pattern]
+  * [Sequence]
+  * [Parallel]
+  * [Staggered]
