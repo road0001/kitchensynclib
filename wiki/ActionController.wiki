@@ -1,4 +1,6 @@
+#summary An action used to control other actions.
 #labels Actions
+
 =Action Controllers and Commands=
 An action controller is a type of action that sends _commands_ to other [AbstractSynchronizedAction action] objects such as stop, start, or pause. The commands that can be executed are stored in the enumeration class `ActionControllerCommand`.  They include...
   * !ActionControllerCommand.KILL
