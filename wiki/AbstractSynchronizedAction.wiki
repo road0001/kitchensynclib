@@ -19,5 +19,8 @@ KitchenSync is made up of several types of objects that perform some kind of fun
   * [Tween]
   * [Wait]
 
+==States of an action==
+[http://mimswright.com/kitchensync/docs/img/actionStateMachine.png]
+
 ==Related Links==
   * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/AbstractSynchronizedAction.html API Reference for AbstractSynchronizedAction]
