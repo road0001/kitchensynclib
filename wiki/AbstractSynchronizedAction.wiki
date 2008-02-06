@@ -19,6 +19,8 @@ KitchenSync is made up of several types of objects that perform some kind of fun
   * [Tween]
   * [Wait]
 
+===Hierarchy===
+Here's a diagram of the inheritance chain as it stands at this point.
 [http://mimswright.com/kitchensync/docs/img/synchronizedActionUML.png]
 
 ==States of an action==
