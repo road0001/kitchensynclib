@@ -1,0 +1,7 @@
+#summary Help with installing KitchenSync and using it with your project.
+#labels Incomplete-MoreDetails,Incomplete-Screenshots
+
+_Coming Soon_
+
+==Related Links==
+  * [GettingStarted Getting started]
