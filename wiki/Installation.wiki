@@ -1,5 +1,5 @@
 #summary Help with downloading and installing KitchenSync and using it with your project.
-#labels Incomplete-MoreDetails,Incomplete-Screenshots
+#labels Featured
 
 This document should help you gain access to the KitchenSync library and set it up for use in a Flash or Flex project.
 
@@ -17,10 +17,23 @@ If you use Flash CS3 to code, you will need to use the *source files* since, unf
 
 If you use any other platform you can choose between the two. The pre-compiled .swc file will save you time when compiling and still give you the benefits of code-hinting in tools like FlexBuilder but is un-editable and does not allow you to view its contents. The raw source code can be viewed and edited but must be recompiled each time your program changes and, if edited, can become out of sync with the repository.
 
-==Adding KitchenSync to your project==
+==Instilling KitchenSync to your project==
+In order to 'install' the library, you'll need to follow one of the following paths. Once you have included the source files in your class path, check out the [GettingStarted getting started] page for help with coding.
+
 ===Flash CS3 users===
-You'll need to add the source folder (the folder containing !KitchenSync's `/com` and/or `/org` folders) to your .fla file's classpath. For information on how to do this, either consult the [http://livedocs.adobe.com/flash/9.0/main/wwhelp/wwhimpl/common/html/wwhelp.htm?context=LiveDocs_Parts&file=00000775.html boring Flash documentation] or [http://mimswright.com/blog/?p=210 check out this video] by [http://partlyhuman.com Roger Braunstein].
-===FlexBuilder users===
+You'll need to add the source folder (the folder containing !KitchenSync's `/com` and/or `/org` folders) to your .fla file's classpath. For information on how to do this, consult the [http://livedocs.adobe.com/flash/9.0/main/wwhelp/wwhimpl/common/html/wwhelp.htm?context=LiveDocs_Parts&file=00000775.html boring Flash documentation].
+
+Remember to `import com.mimswright.sync.*;` or the code won't be recognized by the compiler!
+
+===!FlexBuilder users===
+You'll need to add the .swc or the source folder to your project in the Build Path panel of the properties window. For .swc's, click the Library Path tab and then click the 'Add SWC...' or 'Add SWC Folder' to locate the .swc file. For source, click the 'Add Folder...' button on the Source Path tab and navigate to the folder containing the `/com` and `/org` folders for KitchenSync.
+
+[http://mimswright.com/kitchensync/docs/img/buildPathHelp.png]
+
+For more help with this, check out the [http://livedocs.adobe.com/labs/flex3/html/help.html?content=ui_reference_3.html Adobe LiveDocs].
+
+*Note:* If your project is a Flex project (rather than ActionScript 3.0 project), check out the wiki page on [Using_KitchenSync_with_Flex Using KitchenSync for a Flex Project].
+
 ===Flex SDK users===
 You probably don't need my help.
 
