@@ -5,3 +5,4 @@ _Coming Soon_
 
 ==Related Links==
   * [GettingStarted Getting started]
+  * [http://mimswright.com/blog/?p=210 Setting up a new project with Flash CS3 or FlexBuilder]
