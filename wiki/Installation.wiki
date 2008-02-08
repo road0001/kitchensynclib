@@ -1,8 +1,16 @@
-#summary Help with installing KitchenSync and using it with your project.
+#summary Help with downloading and installing KitchenSync and using it with your project.
 #labels Incomplete-MoreDetails,Incomplete-Screenshots
 
-_Coming Soon_
+==Downloading KitchenSync Code==
+The code for KitchenSync is freely available for download through the Google Code site. There are two basic ways to get the code.
+  # Visit the [http://code.google.com/p/kitchensynclib/downloads/list Downloads tab] and download the latest stable build.
+  # Use [http://subversion.tigris.org/ Subversion] (SVN) to check out the code from the repository through the [http://code.google.com/p/kitchensynclib/source/checkout Source tab]. 
+
+*Note* If you are comfortable using SVN, this is the recommended way to get the source code. The code in the `/trunk` folder is the latest build and may be unstable or have partially implemented features. However, all stable versions are available to download since they will be tagged in the `/tags` folder. If you're not sure what a [http://svnbook.red-bean.com/en/1.4/svn.branchmerge.tags.html tag] is (or have no idea what I'm talking about), I recommend [http://svnbook.red-bean.com/ learning all about Subversion] or just downloading the .zip file.
+
 
 ==Related Links==
   * [GettingStarted Getting started]
+  * [Using_KitchenSync_with_Flex Using KitchenSync for a Flex Project]
   * [http://mimswright.com/blog/?p=210 Setting up a new project with Flash CS3 or FlexBuilder]
+  * [http://svnbook.red-bean.com/ Version Control with Subversion] free eBook
