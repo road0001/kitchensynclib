@@ -1,6 +1,8 @@
 #summary Help with downloading and installing KitchenSync and using it with your project.
 #labels Incomplete-MoreDetails,Incomplete-Screenshots
 
+This document should help you gain access to the KitchenSync library and set it up for use in a Flash or Flex project.
+
 ==Downloading KitchenSync Code==
 The code for KitchenSync is freely available for download through the Google Code site. There are two basic ways to get the code.
   # Visit the [http://code.google.com/p/kitchensynclib/downloads/list Downloads tab] and download the latest stable build.
@@ -8,6 +10,19 @@ The code for KitchenSync is freely available for download through the Google Cod
 
 *Note* If you are comfortable using SVN, this is the recommended way to get the source code. The code in the `/trunk` folder is the latest build and may be unstable or have partially implemented features. However, all stable versions are available to download since they will be tagged in the `/tags` folder. If you're not sure what a [http://svnbook.red-bean.com/en/1.4/svn.branchmerge.tags.html tag] is (or have no idea what I'm talking about), I recommend [http://svnbook.red-bean.com/ learning all about Subversion] or just downloading the .zip file.
 
+===Source files vs. Compiled code library (SWC)===
+Whether you download a zip or checkout from the repository, the code will come in one of two forms: as a series of folders containing .as files (in the `/src` folder in the repository), or as a single compiled code library in a .swc file (in the `/bin` folder in the repository). 
+
+If you use Flash CS3 to code, you will need to use the *source files* since, unfortunately, Flash CS3 cannot use .swc files compiled by the Flex SDK. Also, I would strongly suggest that you consider switching to FlexBuilder or another platform to do your development work.
+
+If you use any other platform you can choose between the two. The pre-compiled .swc file will save you time when compiling and still give you the benefits of code-hinting in tools like FlexBuilder but is un-editable and does not allow you to view its contents. The raw source code can be viewed and edited but must be recompiled each time your program changes and, if edited, can become out of sync with the repository.
+
+==Adding KitchenSync to your project==
+===Flash CS3 users===
+You'll need to add the source folder (the folder containing !KitchenSync's `/com` and/or `/org` folders) to your .fla file's classpath. For information on how to do this, either consult the [http://livedocs.adobe.com/flash/9.0/main/wwhelp/wwhimpl/common/html/wwhelp.htm?context=LiveDocs_Parts&file=00000775.html boring Flash documentation] or [http://mimswright.com/blog/?p=210 check out this video] by [http://partlyhuman.com Roger Braunstein].
+===FlexBuilder users===
+===Flex SDK users===
+You probably don't need my help.
 
 ==Related Links==
   * [GettingStarted Getting started]
