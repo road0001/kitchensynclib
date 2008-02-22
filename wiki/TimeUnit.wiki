@@ -1,10 +1,15 @@
 #summary Information about parsing time strings, and sync mode.
 =Time string parsing, and sync mode=
 
-~~[KitchenSync KitchenSync] supports multiple time units so that it might best fit your project's needs.~~ _TimeUnits have been removed from version 1.1 since they seemed to be becoming unmanageable and the TimeStringParser seemed to do pretty much the same thing._
+Most times in KithcenSync such as duration and offset can be entered using integers or strings. Many different methods for entering times are provided to make KitchenSync versatile enough to work with several types of applications.
 
-=Parsing time strings==
-Because of some magic behind the scenes ([http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/TimeStringParser_en.html TimeStringParser_en]), KitchenSync is able to automatically parse time values based on a string value rather than an integer. When using the constructor for any of the actions in KitchenSync, try passing in an English language string with numbers and units such as "1.5 seconds" or "15min". 
+==Using integers==
+Using an integer value to set a duration will use milliseconds as the unit of time. 
+
+~~[KitchenSync KitchenSync] supports multiple time units so that it might best fit your project's needs.~~ _TimeUnits have been removed from version 1.1 since they were becoming unmanageable and the TimeStringParser seemed to do pretty much the same thing._
+
+==Parsing time strings==
+Because of some magic behind the scenes ([http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/TimeStringParser_en.html TimeStringParser_en]), KitchenSync is able to automatically parse a string value into milliseconds. When using the constructor for any of the actions in KitchenSync, try passing in an English language string with numbers and units such as "1.5 seconds" or "15min". 
 The following lines are all functionally equivelant...
 {{{
 new SynchronizedTrace("Five seconds have elapsed.", "5 seconds");
@@ -28,6 +33,8 @@ Additionally, all of these structures are supported.
   * "dd:hh:mm:ss;ff"
   * ":ss"
   * "m:ss;ff"
+
+Regardless of which method is used, values will always be stored as milliseconds. 
 
 ==Sync mode==
 Since the Flash Player's frame rate doesn't always stay true to its word, KitchenSync's actions includes a special sync mode. What this does is try to match the time set for the duration and offset to the actual number of milliseconds elapsed rather than the number of frames elapsed. That way, if there is an unusual slowdown, your actions will still happen at the time you asked them to! 
