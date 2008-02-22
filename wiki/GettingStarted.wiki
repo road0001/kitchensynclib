@@ -100,7 +100,7 @@ The first two are the target object and the name property to change (representin
 
 The next two are the end point and the start point. The sprite will be moved from 0 to 300 (*Note:* The end value comes before the start value because the start value is optional). 
 
-The next two are the duration and offset. These determine the time that the tween will take place. The first is the duration (3 seconds), the second is the offset, or delay, (0 seconds). Note that the time was entered using a string - to read more about that, check out the wiki page for [TimeUnit]. Once the `start()` method is called, the tween will wait for the `offset` time (in this case, 0 seconds) before it starts. After that, the tween will take 3 seconds to complete (unless it's paused or stopped).
+The next two are the duration and offset. These determine the time that the tween will take place. The first is the duration (3 seconds), the second is the offset, or delay, (0 seconds). Note that the time was entered using a string - to read more about that, check out the wiki page for [TimeUnit parsing time strings]. Once the `start()` method is called, the tween will wait for the `offset` time (in this case, 0 seconds) before it starts. After that, the tween will take 3 seconds to complete (unless it's paused or stopped).
 
 The final parameter is the [Easing easing function]. This determines the type of motion you'll see. Try playing around with different ones for various effects. For examples of different easing types, check the [http://mimswright.com/kitchensync/demo/easing/ Easing Demo] and the [Easing Easing wiki page]. Be sure you don't use parentheses when you add an easing function.
 
