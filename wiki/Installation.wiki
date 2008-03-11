@@ -17,7 +17,7 @@ If you use Flash CS3 to code, you will need to use the *source files* since, unf
 
 If you use any other platform you can choose between the two. The pre-compiled .swc file will save you time when compiling and still give you the benefits of code-hinting in tools like FlexBuilder but is un-editable and does not allow you to view its contents. The raw source code can be viewed and edited but must be recompiled each time your program changes and, if edited, can become out of sync with the repository.
 
-==Instilling KitchenSync to your project==
+==Installing KitchenSync to your project==
 In order to 'install' the library, you'll need to follow one of the following paths.
 
 ===Flash CS3 users===
