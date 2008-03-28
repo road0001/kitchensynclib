@@ -48,4 +48,4 @@ synchedTween.sync = true;
 synchedTween.start();
 }}}
 
-The default value for `sync` can be set in ActionDefaults.
+The default value for `sync` can be set in [ActionDefaults].
