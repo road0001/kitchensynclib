@@ -4,20 +4,7 @@
 =Actions=
 KitchenSync is made up of several types of objects that perform some kind of function and are timed by the Synchronizer. These objects are called _actions_. All actions are subclasses of the abstract class `AbstractAction`. 
 
-==Known descendants of !AbstractAction==
-  * [ActionGroups AbstractActionGroup]
-  * [KSActionController]
-  * [KSParallelGroup]
-  * [KSSequenceGroup]
-  * [KSStaggeredGroup]
-  * [KSDispatchEvent]
-  * [KSFunction]
-  * [KSMovieClipController]
-  * [KSSetProperty]
-  * [KSSound]
-  * [KSTrace]
-  * [KSTween]
-  * [KSWait]
+Descendants of !AbstractAction can be found in the org.as3lib.kitchensync.action package.
 
 ===Hierarchy===
 Here's a diagram of the inheritance chain as it stands at this point.
