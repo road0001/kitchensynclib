@@ -2,11 +2,11 @@
 #labels Actions
 
 ==Summary==
-Perhaps the most used action is the Tween. A tween is an object that represents a change of a property from one value to another over time. However, in most cases, the word tween is more likely to be synonymous with an animation be-*tween* two key points. A tween object has a target object (usually a display object) whose properties are affected, a target property, a duration, a start value and an end value. Tweens also use a special type of function, called an [Easing easing function], to determine the interpolation from the start to the ending values.
+Perhaps the most used action is the !KSTween. A tween is an object that represents a change of a property from one value to another over time. However, in most cases, the word tween is more likely to be synonymous with an animation be-*tween* two key points. A tween object has a target object (usually a display object) whose properties are affected, a target property, a duration, a start value and an end value. KSTweens also use a special type of function, called an [Easing easing function], to determine the interpolation from the start to the ending values.
 
 ==Syntax==
 {{{
-new Tween(target:Object, property:String, toValue:Number, fromValue:Number = Tween.EXISTING_FROM_VALUE, duration:* = 0, offset:* = 0, easingFunction:Function = null);
+new KSTween(target:Object, property:String, toValue:Number, fromValue:Number = KSTween.EXISTING_FROM_VALUE, duration:* = 0, offset:* = 0, easingFunction:Function = null);
 }}}
   * `target` - the object whose property will be changed.
   * `property` - the name of the property to change. The property must be a Number, int or uint such as a `Sprite` object's "alpha"
@@ -24,8 +24,8 @@ package {
 	import org.as3lib.kitchensync.*;
 	import flash.display.*;
 	
-	public class TweenDemo extends Sprite {
-		public function TweenDemo() {
+	public class KSTweenDemo extends Sprite {
+		public function KSTweenDemo() {
 			// set framerate to 30 frames per second
 			stage.frameRate = 30;
 			// start the Synchronizer. You'll only need to do this once.
@@ -38,9 +38,9 @@ package {
 			addChild(sprite);
 			
 			// move the rectangle from left to right.
-			var tweenX:Tween = new Tween(sprite, "x", 300, 0, "3sec", "0sec", Cubic.easeInOut);
+			var tweenX:KSTween = new KSTween(sprite, "x", 300, 0, "3sec", "0sec", Cubic.easeInOut);
 			// apply the same animation to the y property.
-			var tweenY:Tween = tweenX.cloneWithTarget(sprite, "y");
+			var tweenY:KSTween = tweenX.cloneWithTarget(sprite, "y");
 			
 			tweenX.start();
 			tweenY.start();
@@ -50,6 +50,6 @@ package {
 }}}
 
 ==Related Links==
-  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/Tween.html API Reference]
+  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/KSTween.html API Reference]
   * [AbstractAction]
   * [Easing Easing Functions]

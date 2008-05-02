@@ -5,7 +5,7 @@ Easing functions are mathematical functions that are used to interpolate values 
 
 All of the easing functions in KitchenSync take at least two arguments, time elapsed and duration (some also take additional modifier arguments such as frequency or aplitude), and produce results in the range of 0.0 to 1.0 (again, some functions, such as the Elastics may travel outside of that range). This is slightly different from many other versions of easing functions which calculate a start value and end value but I found this to be cleaner and more versatile. 
 
-All of the easing functions are stored as static functions in the `org.as3lib.kitchensync.easing` package. Since you're using KitchenSync, it's not likely that you will be working with the gritty details of easing functions since they're handled automatically within the Tween class. However, if you need to access them directly, call the function with the [http://mimswright.com/kitchensync/docs/api/com/mimswright/easing/EasingUtil.html#call() EasingUtil.call()] method (more on !EasingUtil below), or use the following syntax.
+All of the easing functions are stored as static functions in the `org.as3lib.kitchensync.easing` package. Since you're using KitchenSync, it's not likely that you will be working with the gritty details of easing functions since they're handled automatically within the KSTween class. However, if you need to access them directly, call the function with the [http://mimswright.com/kitchensync/docs/api/com/mimswright/easing/EasingUtil.html#call() EasingUtil.call()] method (more on !EasingUtil below), or use the following syntax.
 {{{
 newPosition = startPosition + (Cubic.easeIn(timeElapsed, totalDuration) * (endPosition - startPosition));
 }}}
@@ -84,4 +84,4 @@ KitchenSync contains the following easing functions. Most you are probably famil
 
 ==Related Links==
   * [http://mimswright.com/kitchensync/docs/api/com/mimswright/easing/package-detail.html org.as3lib.kitchensync.easing package API]
-  * [Tween Tweens]
+  * [KSTween KSTweens]

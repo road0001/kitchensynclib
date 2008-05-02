@@ -61,9 +61,9 @@ For more info on [KSFunction KSFunctions], check the wiki page.
 
 Now, onto the good stuff...
 
-==Creating [Tweens]==
-A [Tween] is an animation be-tween two key points. 
-Our first demo will first create a rectangle to play with. After that, we'll use a [Tween] object to move the rectangle from x=0 to x=300 over the course of 3 seconds.
+==Creating [KSTween tweens]==
+A [KSTween Tween] is an animation be-tween two key points. It uses the [KSTween] class.
+Our first demo will first create a rectangle to play with. After that, we'll use a [KSTween] object to move the rectangle from x=0 to x=300 over the course of 3 seconds.
 {{{
 package {
 	import org.as3lib.kitchensync.easing.*;
@@ -87,7 +87,7 @@ package {
 			sprite.graphics.drawRect(0,0,20,20);
 			addChild(sprite);
 			
-			var tween:Tween = new Tween(sprite, "x", 300, 0, "3sec", "0sec", Cubic.easeInOut);
+			var tween:KSTween = new KSTween(sprite, "x", 300, 0, "3sec", "0sec", Cubic.easeInOut);
 			tween.start();
 		}
 	}
@@ -106,15 +106,15 @@ The final parameter is the [Easing easing function]. This determines the type of
 
 Once it's set up, use the start() method to get things rolling.
 
-===Cloning a Tween===
-Since at this point you can only change one target/property at time with a Tween object (I'll be adding functionality for multiple targets/properties soon), I've added the ability to make a copy a tween. Let's replace the tween lines with one that modifies `x` then copy it to target `y` using `cloneWithTarget()`. This will cause the square to move diagonally since x and y are being tweened at the same time. 
+===Cloning a KSTween===
+Since at this point you can only change one target/property at time with a KSTween object (I'll be adding functionality for multiple targets/properties soon), I've added the ability to make a copy a tween. Let's replace the tween lines with one that modifies `x` then copy it to target `y` using `cloneWithTarget()`. This will cause the square to move diagonally since x and y are being tweened at the same time. 
 {{{
-var tweenX:Tween = new Tween(sprite, "x", 300, 0, "3sec", "0sec", Cubic.easeInOut);
-var tweenY:Tween = tweenX.cloneWithTarget(sprite, "y");
+var tweenX:KSTween = new KSTween(sprite, "x", 300, 0, "3sec", "0sec", Cubic.easeInOut);
+var tweenY:KSTween = tweenX.cloneWithTarget(sprite, "y");
 tweenX.start();
 tweenY.start();
 }}}
-While all [AbstractAction AbstractActions] have a `clone()` method, Tweens support the `cloneWithTarget()` method as well as the `cloneReversed()` method which clones the tween with the start and end points switched.
+While all [AbstractAction AbstractActions] have a `clone()` method, KSTweens support the `cloneWithTarget()` method as well as the `cloneReversed()` method which clones the tween with the start and end points switched.
 
 Now what if you wanted the box to move right _then_ move down instead of moving diagonally? You could set the offset for tweenY to 3 seconds so it waits until the tweenX is done before starting _OR_ you could use an [AbstractActionGroup action group]...
 
@@ -149,9 +149,9 @@ package {
 			addChild(sprite);
 			
 			// move the rectangle from left to right.
-			var tweenX:Tween = new Tween(sprite, "x", 300, 0, "3sec", "0sec", Cubic.easeInOut);
+			var tweenX:KSTween = new KSTween(sprite, "x", 300, 0, "3sec", "0sec", Cubic.easeInOut);
 			// apply the same animation to the y property.
-			var tweenY:Tween = tweenX.cloneWithTarget(sprite, "y");
+			var tweenY:KSTween = tweenX.cloneWithTarget(sprite, "y");
 			
 			// add the x and y tweens to a new sequence.
 			var sequence:KSSequenceGroup = new KSSequenceGroup(
@@ -174,8 +174,8 @@ Let's add a [KSParallelGroup] group to the [KSSequenceGroup] to change the size.
 
 {{{
 var scaleUp:KSParallelGroup = new KSParallelGroup(
-	new Tween(sprite, "scaleX", 3.0, 1.0, "5s", 0, Elastic.easeOut),
-	new Tween(sprite, "scaleY", 3.0, 1.0, "6s", 0, Elastic.easeOut)
+	new KSTween(sprite, "scaleX", 3.0, 1.0, "5s", 0, Elastic.easeOut),
+	new KSTween(sprite, "scaleY", 3.0, 1.0, "6s", 0, Elastic.easeOut)
 );
 			
 // after adding other child actions but before starting the sequence, add the parallel group.

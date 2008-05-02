@@ -35,9 +35,9 @@ package
 			addChild(sprite);
 			
 			// Tween the rectangle from 0 to 300 over 4 seconds.
-			var tween:Tween = new Tween(sprite, "x", 300, 0, "3s", "0s", Cubic.easeInOut);
+			var tween:KSTween = new KSTween(sprite, "x", 300, 0, "3s", "0s", Cubic.easeInOut);
 			// Duplicate the tween in reverse.
-			var tween2:Tween = tween.cloneReversed();
+			var tween2:KSTween = tween.cloneReversed();
 			
 			// add a 2 second pause after the square moves before returning it back to it's start position.
 			var group:KSSequenceGroup = new KSSequenceGroup(tween, new Wait("2s"), tween2);
