@@ -20,8 +20,8 @@ new Tween(target:Object, property:String, toValue:Number, fromValue:Number = Twe
 This example creates a box then two tweens that move it to the right and down respectively.
 {{{
 package {
-	import com.mimswright.easing.*;
-	import com.mimswright.sync.*;
+	import org.as3lib.kitchensync.easing.*;
+	import org.as3lib.kitchensync.*;
 	import flash.display.*;
 	
 	public class TweenDemo extends Sprite {
@@ -51,5 +51,5 @@ package {
 
 ==Related Links==
   * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/Tween.html API Reference]
-  * [AbstractSynchronizedAction]
+  * [AbstractAction]
   * [Easing Easing Functions]

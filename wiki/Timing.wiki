@@ -12,15 +12,15 @@ Using an integer value to set a duration will use milliseconds as the unit of ti
 Because of some magic behind the scenes ([http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/TimeStringParser_en.html TimeStringParser_en]), KitchenSync is able to automatically parse a string value into milliseconds. When using the constructor for any of the actions in KitchenSync, try passing in an English language string with numbers and units such as "1.5 seconds" or "15min". 
 The following lines are all functionally equivelant...
 {{{
-new SynchronizedTrace("Five seconds have elapsed.", "5 seconds");
-new SynchronizedTrace("Five seconds have elapsed.", "5 sec");
-new SynchronizedTrace("Five seconds have elapsed.", "5 s");
-new SynchronizedTrace("Five seconds have elapsed.", "0:05");
-new SynchronizedTrace("Five seconds have elapsed.", "5000ms");
-new SynchronizedTrace("Five seconds have elapsed.", "5000 milliseconds");
-new SynchronizedTrace("Five seconds have elapsed.", "5000 msec");
-new SynchronizedTrace("Five seconds have elapsed.", "3 seconds, 2000 milliseconds");
-new SynchronizedTrace("Five seconds have elapsed.", "0.8333 minutes");
+new KSTrace("Five seconds have elapsed.", "5 seconds");
+new KSTrace("Five seconds have elapsed.", "5 sec");
+new KSTrace("Five seconds have elapsed.", "5 s");
+new KSTrace("Five seconds have elapsed.", "0:05");
+new KSTrace("Five seconds have elapsed.", "5000ms");
+new KSTrace("Five seconds have elapsed.", "5000 milliseconds");
+new KSTrace("Five seconds have elapsed.", "5000 msec");
+new KSTrace("Five seconds have elapsed.", "3 seconds, 2000 milliseconds");
+new KSTrace("Five seconds have elapsed.", "0.8333 minutes");
 }}}
 Additionally, all of these structures are supported.  
   * "1 hour, 2 minutes, 3 seconds, 4 milliseconds"

@@ -2,11 +2,11 @@
 #labels Actions
 
 ==Summary==
-[AbstractSynchronizedAction SynchronizedAction] to set a property for any object to a specified value after some delay.
+[AbstractAction Action] to set a property for any object to a specified value after some delay.
 
 ==Syntax==
 {{{
-new SynchronizedSetProperty(target:Object, key:String, value:*, offset:* = 0);
+new KSSetProperty(target:Object, key:String, value:*, offset:* = 0);
 }}}
 
   * `target` - The object whose property you want to modify.
@@ -18,7 +18,7 @@ new SynchronizedSetProperty(target:Object, key:String, value:*, offset:* = 0);
 This example creates a text field and sets the text property after five seconds.
 {{{
 package {
-	import com.mimswright.sync.*;
+	import org.as3lib.kitchensync.*;
 	import flash.display.*;
 	import flash.text.*;
 
@@ -33,7 +33,7 @@ package {
 			info.text = "Loading, please wait.";
 			addChild(info);
 			
-			var showCompleteAction:SynchronizedSetProperty = new SynchronizedSetProperty(info, "text", "Loading Complete!", "5 seconds");
+			var showCompleteAction:KSSetProperty = new KSSetProperty(info, "text", "Loading Complete!", "5 seconds");
 			showCompleteAction.start();
 		}
 	}
@@ -41,5 +41,5 @@ package {
 }}}
 
 ==Links==
-  * [AbstractSynchronizedAction]
-  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/SynchronizedSetProperty.html API Reference]
+  * [AbstractAction]
+  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/KSSetProperty.html API Reference]

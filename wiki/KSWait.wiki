@@ -2,7 +2,7 @@
 #labels Actions
 =Wait=
 ==Summary==
-This [AbstractSynchronizedAction action] simply waits for the duration specified then ends. It can be used for spacing out time in a [Sequence].
+This [AbstractAction action] simply waits for the duration specified then ends. It can be used for spacing out time in a [KSSequenceGroup].
 
 ==Syntax==
 {{{
@@ -11,15 +11,15 @@ new Wait(waitTime:*)
   * `waitTime` - The wait time (offset)
 
 ==Example==
-Creates a [Sequence] that moves a square from left to right, uses Wait to pause for 2 seconds, then moves the square from right to left.
+Creates a [KSSequenceGroup] that moves a square from left to right, uses Wait to pause for 2 seconds, then moves the square from right to left.
 
 [http://mimswright.com/kitchensync/demo/wait/ View demo]
 
 {{{
 package
 {
-	import com.mimswright.easing.*;
-	import com.mimswright.sync.*;
+	import org.as3lib.kitchensync.easing.*;
+	import org.as3lib.kitchensync.*;
 	
 	import flash.display.Sprite;
 	
@@ -40,7 +40,7 @@ package
 			var tween2:Tween = tween.cloneReversed();
 			
 			// add a 2 second pause after the square moves before returning it back to it's start position.
-			var group:Sequence = new Sequence(tween, new Wait("2s"), tween2);
+			var group:KSSequenceGroup = new KSSequenceGroup(tween, new Wait("2s"), tween2);
 			group.start();
 		}
 	}

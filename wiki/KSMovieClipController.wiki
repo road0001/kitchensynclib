@@ -1,16 +1,16 @@
 #summary An action to control playback of a movie clip.
 #labels Actions,Incomplete-Example
 
-[AbstractSynchronizedAction SynchronizedAction] to tell a `MovieClip` object to play a specified frame.
+[AbstractAction action] to tell a `MovieClip` object to play a specified frame.
 
 The syntax for the constructor is...
 {{{	
-new SynchronizedGotoFrame(offset:*, target:MovieClip, frameIdentifier:*);
+new KSMovieClipController(offset:*, target:MovieClip, frameIdentifier:*);
 }}}
   * `offset` - delay before executing
   * `target` - the !MovieClip to play
   * `frameIdentifier` - a string or a frame number
 
 ==Links==
-  * [AbstractSynchronizedAction]
-  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/SynchronizedGotoFrame.html API for this class]
+  * [AbstractAction]
+  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/KSMovieClipController.html API for this class]

@@ -2,14 +2,14 @@
 #labels Actions,Incomplete-Example
 
 ==Summary==
-`SynchronizedTrace` is a subclass of [SynchronizedFunction] that runs a `trace()` statement after a delay (offset). 
+`KSTrace` is a subclass of [KSFunction] that runs a `trace()` statement after a delay (offset). 
 
 ==Syntax==
 {{{
-new SynchronizedTrace(message:*, offset:* = 0)
+new KSTrace(message:*, offset:* = 0)
 }}}
   * `message` - The message to display in the output window.
   * `offset` - The delay before the message is displayed.
 
 ==Links==
-[http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/SynchronizedTrace.html API Reference for SynchronizedTrace]
+[http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/KSTrace.html API Reference for KSTrace]

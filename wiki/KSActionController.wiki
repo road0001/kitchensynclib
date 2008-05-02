@@ -2,7 +2,7 @@
 #labels Actions
 
 =Action Controllers and Commands=
-An action controller is a type of action that sends _commands_ to other [AbstractSynchronizedAction action] objects such as stop, start, or pause. The commands that can be executed are stored in the enumeration class `ActionControllerCommand`.  They include...
+An action controller is a type of action that sends _commands_ to other [AbstractAction action] objects such as stop, start, or pause. The commands that can be executed are stored in the enumeration class `ActionControllerCommand`.  They include...
   * !ActionControllerCommand.KILL
   * !ActionControllerCommand.PAUSE
   * !ActionControllerCommand.RESET
@@ -12,26 +12,26 @@ An action controller is a type of action that sends _commands_ to other [Abstrac
 
 ==Syntax==
 {{{
-new ActionController(target:AbstractSynchronizedAction, command:ActionControllerCommand, offset:*);
+new KSActionController(target:AbstractAction, command:ActionControllerCommand, offset:*);
 }}}
-  * `target` - the [AbstractSynchronizedAction] that will receive the commands from the controller.
-  * `command` - the function that the [AbstractSynchronizedAction SynchronizedAction] will perform when the ActionController executes.
+  * `target` - the [AbstractAction] that will receive the commands from the controller.
+  * `command` - the function that the [AbstractAction action] will perform when the KSActionController executes.
   * `offset` - the delay before the action executes
 
 
 ==Example==
-The following example will pause a [Tween tween] partway through its execution and then unpause it after one second using two !ActionControllers.
+The following example will pause a [Tween tween] partway through its execution and then unpause it after one second using two !KSActionControllers.
 {{{
 package
 {
-	import com.mimswright.easing.*;
-	import com.mimswright.sync.*;
+	import org.as3lib.kitchensync.easing.*;
+	import org.as3lib.kitchensync.*;
 	
 	import flash.display.Sprite;
 	
-	public class ActionControllerDemo extends Sprite
+	public class KSActionControllerDemo extends Sprite
 	{
-		public function ActionControllerDemo() {
+		public function KSActionControllerDemo() {
 			Synchronizer.initialize(this);
 			
 			// Draw a rectangle to use for demonstrations.
@@ -43,10 +43,10 @@ package
 			// Tween the rectangle from 0 to 300 over 4 seconds.
 			var tween:Tween = new Tween(sprite, "x", 300, 0, "4s", "0s", Cubic.easeInOut);
 			// use action controllers to pause the tween at 2 seconds then unpause 1 second later.
-			var pauseTween:ActionController = new ActionController(tween, ActionControllerCommand.PAUSE, "2s");
-			var unpauseTween:ActionController = new ActionController(tween, ActionControllerCommand.UNPAUSE, "3s");
+			var pauseTween:KSActionController = new KSActionController(tween, ActionControllerCommand.PAUSE, "2s");
+			var unpauseTween:KSActionController = new KSActionController(tween, ActionControllerCommand.UNPAUSE, "3s");
 			// add all actions to a group and start the group.
-			var group:Parallel = new Parallel(tween, pauseTween, unpauseTween);
+			var group:KSParallelGroup = new KSParallelGroup(tween, pauseTween, unpauseTween);
 			group.start();
 		}
 	}
@@ -54,5 +54,5 @@ package
 }}}
 
 ==Related Links==
-  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/ActionController.html API Reference for ActionController]
+  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/KSActionController.html API Reference for KSActionController]
   * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/ActionControllerCommand.html API Reference for ActionControllerCommand]

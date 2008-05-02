@@ -1,15 +1,15 @@
 #summary An action to dispatch an AS3 event.
 #labels Actions,Incomplete-Example
 ==Summary==
-A [AbstractSynchronizedAction SynchronizedAction] that causes an event to be dispatched at the time of execution. 
+An [AbstractAction action] that causes an event to be dispatched at the time of execution. 
 
-An ActionScript 3.0 Event can be dispatched after a delay or as part of a sequence using a `SynchronizedDispatchEvent` object. Events are dispatched using the AS3 event dispatching system and can be sent from the `SynchronizedDispatchEvent` itself or from any other `IEventDispatcher` that you specify. The constructor can be passed either an Event object or a string for the event type.
+An ActionScript 3.0 Event can be dispatched after a delay or as part of a sequence using a `KSDispatchEvent` object. Events are dispatched using the AS3 event dispatching system and can be sent from the `KSDispatchEvent` itself or from any other `IEventDispatcher` that you specify. The constructor can be passed either an Event object or a string for the event type.
 
- An AS3 Event can be dispatched after a delay or as part of a sequence using this class. Events are dispatched using the AS3 event dispatching system and can be sent from the SynchronizedDispatchEvent itself or from any other IEventDispatcher. The constructor can be passed either an Event object or a string for the event type. Uses weak references by default.
+ An AS3 Event can be dispatched after a delay or as part of a sequence using this class. Events are dispatched using the AS3 event dispatching system and can be sent from the KSDispatchEvent itself or from any other IEventDispatcher. The constructor can be passed either an Event object or a string for the event type. Uses weak references by default.
 
 ==Syntax==
 {{{
-new SynchronizedDispatchEvent(event:*, target:IEventDispatcher, offset = 0, ... listeners:*)
+new KSDispatchEvent(event:*, target:IEventDispatcher, offset = 0, ... listeners:*)
 Constructor.
 }}}
   * `event` - Can be either an `Event` object or a `String`. If event is an `Event`, that object is used. If event is a string, a new `Event` with that type is automatically created.
@@ -18,7 +18,7 @@ Constructor.
   * `listeners` - Any additional objects passed in will be added as listeners (if they're functions)
 
 ==Related Links==
-  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/SynchronizedDispatchEvent.html API Reference]
-  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/AbstractSynchronizedAction.html#addEventTrigger() addEventTrigger()]
-  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/AbstractSynchronizedAction.html#addTrigger() addTrigger()]
-  * [AbstractSynchronizedAction]
+  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/KSDispatchEvent.html API Reference]
+  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/AbstractAction.html#addEventTrigger() addEventTrigger()]
+  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/AbstractAction.html#addTrigger() addTrigger()]
+  * [AbstractAction]

@@ -2,22 +2,22 @@
 #labels Actions,Incomplete-MoreDetails
 
 =Actions=
-KitchenSync is made up of several types of objects that perform some kind of function and are timed by the Synchronizer. These objects are called _actions_. All actions are subclasses of the abstract class `AbstractSynchronizedAction`. 
+KitchenSync is made up of several types of objects that perform some kind of function and are timed by the Synchronizer. These objects are called _actions_. All actions are subclasses of the abstract class `AbstractAction`. 
 
-==Known descendants of !AbstractSynchronizedAction==
-  * [ActionGroups AbstractSynchronizedActionGroup]
-  * [ActionController]
-  * [Parallel]
-  * [Sequence]
-  * [Staggered]
-  * [SynchronizedDispatchEvent]
-  * [SynchronizedFunction]
-  * [SynchronizedGotoFrame]
-  * [SynchronizedSetProperty]
-  * [SynchronizedSound]
-  * [SynchronizedTrace]
-  * [Tween]
-  * [Wait]
+==Known descendants of !AbstractAction==
+  * [ActionGroups AbstractActionGroup]
+  * [KSActionController]
+  * [KSParallelGroup]
+  * [KSSequenceGroup]
+  * [KSStaggeredGroup]
+  * [KSDispatchEvent]
+  * [KSFunction]
+  * [KSMovieClipController]
+  * [KSSetProperty]
+  * [KSSound]
+  * [KSTrace]
+  * [KSTween]
+  * [KSWait]
 
 ===Hierarchy===
 Here's a diagram of the inheritance chain as it stands at this point.
@@ -27,4 +27,4 @@ Here's a diagram of the inheritance chain as it stands at this point.
 [http://mimswright.com/kitchensync/docs/img/actionStateMachine.png]
 
 ==Related Links==
-  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/AbstractSynchronizedAction.html API Reference for AbstractSynchronizedAction]
+  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/AbstractAction.html API Reference for AbstractAction]

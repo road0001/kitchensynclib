@@ -6,11 +6,11 @@ A Staggered [ActionGroups group] of actions will execute one after the other in 
 
 ==Syntax==
 {{{
-new Staggered(stagger:*, ... children)
+new KSStaggeredGroup(stagger:*, ... children)
 }}}
-  * `stagger` - The time to wait between each child's execution. Can be an integer or a string which follows the [TimeUnit#Parsing_time_strings time parsing rules].
-  * `children` - The remaining parameters are added as child actions (if they are AbstractSynchronizedAction instances)
+  * `stagger` - The time to wait between each child's execution. Can be an integer or a string which follows the [Timing#Parsing_time_strings time parsing rules].
+  * `children` - The remaining parameters are added as child actions (if they are AbstractAction instances)
 
 ==Related Links==
-  * [AbstractSynchronizedActionGroup]
-  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/Staggered.html API Reference]
+  * [AbstractActionGroup]
+  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/KSStaggeredGroup.html API Reference]

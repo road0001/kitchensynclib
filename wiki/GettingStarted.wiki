@@ -8,12 +8,12 @@ This document should help you learn what you need to know to get your first [Kit
 *Note:* All of the examples were built using an *!ActionScript 3.0 project* in Adobe !FlexBuilder 3 beta. If you're using KitchenSync for a _Flex_ project, be sure to read this page on [Using_KitchenSync_with_Flex using KitchenSync with Flex]. For help with setting up and running these examples in Flash CS3 or !FlexBuilder, check out the [Installation installation notes] wiki page.
 
 ==Setting up the [Synchronizer]==
-Before doing anything else, you'll first need to set up the `Synchronizer`. The `Synchronizer` is a utility that dispatches events at every frame and is used as the timing core of [KitchenSync]. To start the `Synchronizer`, use the static method `Synchronizer.initialize()` and pass in a reference to any [http://livedocs.adobe.com/labs/flex3/langref/flash/display/DisplayObject.html DisplayObject]. Don't forget to import `com.mimswright.sync.*`! The reference to the `DisplayObject` allows the Synchronizer to communicate with the `stage` so it can listen for events and get the current frame rate. You can also optionally set the frame rate if you want it to be something other than the default. I recommend doing this at the very beginning of your code in your main application file or in your document class.
+Before doing anything else, you'll first need to set up the `Synchronizer`. The `Synchronizer` is a utility that dispatches events at every frame and is used as the timing core of [KitchenSync]. To start the `Synchronizer`, use the static method `Synchronizer.initialize()` and pass in a reference to any [http://livedocs.adobe.com/labs/flex3/langref/flash/display/DisplayObject.html DisplayObject]. Don't forget to import `org.as3lib.kitchensync.*`! The reference to the `DisplayObject` allows the Synchronizer to communicate with the `stage` so it can listen for events and get the current frame rate. You can also optionally set the frame rate if you want it to be something other than the default. I recommend doing this at the very beginning of your code in your main application file or in your document class.
 
 {{{
 package {
 
-	import com.mimswright.sync.*;
+	import org.as3lib.kitchensync.*;
 	
 	import flash.display.Sprite;
 	
@@ -33,31 +33,31 @@ package {
 
 After this, your Synchronizer is set. Since you don't need to register actions, you probably won't need to access it again but if you do, you can use `Synchronizer.getInstance()`.
 
-==Running your first [AbstractSynchronizedAction action]==
-To test that Synchronizer was set up properly, try running a simple script. For this, you'll use the [SynchronizedTrace] class which simply displays a trace statement after a set amount of time. 
+==Running your first [AbstractAction action]==
+To test that Synchronizer was set up properly, try running a simple script. For this, you'll use the [KSTrace] class which simply displays a trace statement after a set amount of time. 
 The first argument is the message to display. This is usually a string but you can also pass in an Object as you would with the `trace()` statement. If you pass in an object, the resutls of its `toString()` method will be displayed.
-The second argument is the _offset_, or delay, before the trace statement is displayed. The default [TimeUnit unit of time] for this is milliseconds so the number 5000 = 5 seconds.
+The second argument is the _offset_, or delay, before the trace statement is displayed. The default [Timing unit of time] for this is milliseconds so the number 5000 = 5 seconds.
 {{{
 // display a message after 5 seconds.
-var message:SynchronizedTrace = new SynchronizedTrace("HELLO, WORLD ... Sorry I'm late!", 5000);
+var message:KSTrace = new KSTrace("HELLO, WORLD ... Sorry I'm late!", 5000);
 message.start();
 }}}
-This code will display the message `HELLO, WORLD ... Sorry I'm late!` after five seconds. If you don't need to keep a reference to the `SynchronizedTrace` object, you could also write this in a slightly more compact way like this...
+This code will display the message `HELLO, WORLD ... Sorry I'm late!` after five seconds. If you don't need to keep a reference to the `KSTrace` object, you could also write this in a slightly more compact way like this...
 {{{
-new SynchronizedTrace("HELLO, WORLD ... Sorry I'm late!", 5000).start();
+new KSTrace("HELLO, WORLD ... Sorry I'm late!", 5000).start();
 }}}
 
-==[SynchronizedFunction Using Synchronized Functions]==
-The previous code is a fairly straightforward example but it illustrates how you can use KitchenSync to execute an action at a specific time. The SynchronizedTrace class is actually a subclass of a much more broad action called SynchronizedFunction. This class allows you to run any function, with arguments, after a specified delay. 
+==[KSFunction Using timed Functions]==
+The previous code is a fairly straightforward example but it illustrates how you can use KitchenSync to execute an action at a specific time. The KSTrace class is actually a subclass of a much more broad action called KSFunction. This class allows you to run any function, with arguments, after a specified delay. 
 {{{
-new SynchronizedFunction(5000, sayHello, "world").start(); // Displays "Hello, world!" after 5 seconds.
+new KSFunction(5000, sayHello, "world").start(); // Displays "Hello, world!" after 5 seconds.
 ...
 protected function sayHello(who:String):void {
 	trace("Hello, " + who + "!");
 }
 }}}
 
-For more info on [SynchronizedFunction SynchronizedFunctions], check the wiki page.
+For more info on [KSFunction KSFunctions], check the wiki page.
 
 Now, onto the good stuff...
 
@@ -66,8 +66,8 @@ A [Tween] is an animation be-tween two key points.
 Our first demo will first create a rectangle to play with. After that, we'll use a [Tween] object to move the rectangle from x=0 to x=300 over the course of 3 seconds.
 {{{
 package {
-	import com.mimswright.easing.*;
-	import com.mimswright.sync.*;
+	import org.as3lib.kitchensync.easing.*;
+	import org.as3lib.kitchensync.*;
 	import flash.display.*;
 	
 	public class KSTutorial extends Sprite {
@@ -78,7 +78,7 @@ package {
 			Synchronizer.initialize(this);
 			
 			// display a message after 5 seconds.
-			var message:SynchronizedTrace = new SynchronizedTrace("HELLO, WORLD ... Sorry I'm late!", 5000);
+			var message:KSTrace = new KSTrace("HELLO, WORLD ... Sorry I'm late!", 5000);
 			message.start();
 			
 			// Draw a rectangle to use for demonstrations.
@@ -100,7 +100,7 @@ The first two are the target object and the name property to change (representin
 
 The next two are the end point and the start point. The sprite will be moved from 0 to 300 (*Note:* The end value comes before the start value because the start value is optional). 
 
-The next two are the duration and offset. These determine the time that the tween will take place. The first is the duration (3 seconds), the second is the offset, or delay, (0 seconds). Note that the time was entered using a string - to read more about that, check out the wiki page for [TimeUnit parsing time strings]. Once the `start()` method is called, the tween will wait for the `offset` time (in this case, 0 seconds) before it starts. After that, the tween will take 3 seconds to complete (unless it's paused or stopped).
+The next two are the duration and offset. These determine the time that the tween will take place. The first is the duration (3 seconds), the second is the offset, or delay, (0 seconds). Note that the time was entered using a string - to read more about that, check out the wiki page for [Timing parsing time strings]. Once the `start()` method is called, the tween will wait for the `offset` time (in this case, 0 seconds) before it starts. After that, the tween will take 3 seconds to complete (unless it's paused or stopped).
 
 The final parameter is the [Easing easing function]. This determines the type of motion you'll see. Try playing around with different ones for various effects. For examples of different easing types, check the [http://mimswright.com/kitchensync/demo/easing/ Easing Demo] and the [Easing Easing wiki page]. Be sure you don't use parentheses when you add an easing function.
 
@@ -114,20 +114,20 @@ var tweenY:Tween = tweenX.cloneWithTarget(sprite, "y");
 tweenX.start();
 tweenY.start();
 }}}
-While all [AbstractSynchronizedAction AbstractSynchronizedActions] have a `clone()` method, Tweens support the `cloneWithTarget()` method as well as the `cloneReversed()` method which clones the tween with the start and end points switched.
+While all [AbstractAction AbstractActions] have a `clone()` method, Tweens support the `cloneWithTarget()` method as well as the `cloneReversed()` method which clones the tween with the start and end points switched.
 
-Now what if you wanted the box to move right _then_ move down instead of moving diagonally? You could set the offset for tweenY to 3 seconds so it waits until the tweenX is done before starting _OR_ you could use an [AbstractSynchronizedActionGroup action group]...
+Now what if you wanted the box to move right _then_ move down instead of moving diagonally? You could set the offset for tweenY to 3 seconds so it waits until the tweenX is done before starting _OR_ you could use an [AbstractActionGroup action group]...
 
-==Creating a [AbstractSynchronizedActionGroup Group]==
-When working with multiple actions, it's often more convenient to combine them into groups  that can be treated as a single unit. These are called [ActionGroups action groups] and they extend the AbstractSynchronizedActionGroup class. 
+==Creating a [AbstractActionGroup Group]==
+When working with multiple actions, it's often more convenient to combine them into groups  that can be treated as a single unit. These are called [ActionGroups action groups] and they extend the AbstractActionGroup class. 
 
-There are three kind of groups [Sequence], [Parallel], and [Staggered] (explained on the [ActionGroups groups wiki page]). Since we want the box to move right _then_ down, we'll use a [Sequence] group.
+There are three kind of groups [KSSequenceGroup], [KSParallelGroup], and [KSStaggeredGroup] (explained on the [ActionGroups groups wiki page]). Since we want the box to move right _then_ down, we'll use a [KSSequenceGroup] group.
 
 The code below will create a new Sequence and add the x and y tweens using the constructor. Then we'll use the `addAction()` method and the `cloneReversed()` method to create the reversed animation back to the starting point
 {{{
 package {
-	import com.mimswright.easing.*;
-	import com.mimswright.sync.*;
+	import org.as3lib.kitchensync.easing.*;
+	import org.as3lib.kitchensync.*;
 	
 	import flash.display.*;
 	
@@ -139,7 +139,7 @@ package {
 			Synchronizer.initialize(this);
 			
 			// display a message after 5 seconds.
-			var message:SynchronizedTrace = new SynchronizedTrace("HELLO, WORLD ... Sorry I'm late!", 5000);
+			var message:KSTrace = new KSTrace("HELLO, WORLD ... Sorry I'm late!", 5000);
 			message.start();
 			
 			// Draw a rectangle to use for demonstrations.
@@ -154,7 +154,7 @@ package {
 			var tweenY:Tween = tweenX.cloneWithTarget(sprite, "y");
 			
 			// add the x and y tweens to a new sequence.
-			var sequence:Sequence = new Sequence(
+			var sequence:KSSequenceGroup = new KSSequenceGroup(
 				tweenX,
 				tweenY
 			);
@@ -170,10 +170,10 @@ package {
 }}}
 An important thing to remember about groups is that they are actions themselves. That means they can be started, stopped, paused, unpaused, and best of all, added to other groups. 
 
-Let's add a [Parallel] group to the [Sequence] to change the size. A Parallel group executes all the child actions inside simultaneously. This one scales up the box. Notice that the duration is slightly different on each and the easing function is Elastic.easeOut to make it wobble a bit.
+Let's add a [KSParallelGroup] group to the [KSSequenceGroup] to change the size. A Parallel group executes all the child actions inside simultaneously. This one scales up the box. Notice that the duration is slightly different on each and the easing function is Elastic.easeOut to make it wobble a bit.
 
 {{{
-var scaleUp:Parallel = new Parallel(
+var scaleUp:KSParallelGroup = new KSParallelGroup(
 	new Tween(sprite, "scaleX", 3.0, 1.0, "5s", 0, Elastic.easeOut),
 	new Tween(sprite, "scaleY", 3.0, 1.0, "6s", 0, Elastic.easeOut)
 );
