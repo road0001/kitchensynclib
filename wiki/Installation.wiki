@@ -28,7 +28,7 @@ Remember to `import org.as3lib.kitchensync.*;` or the code won't be recognized b
 ===!FlexBuilder users===
 You'll need to add the .swc or the source folder to your project in the Build Path panel of the properties window. For .swc's, click the Library Path tab and then click the 'Add SWC...' or 'Add SWC Folder' to locate the .swc file. For source, click the 'Add Folder...' button on the Source Path tab and navigate to the folder containing the `/com` and `/org` folders for KitchenSync.
 
-[http://mimswright.com/kitchensync/docs/img/buildPathHelp.png]
+[http://as3lib.org/kitchensync/docs/img/buildPathHelp.png]
 
 For more help with this, check out the [http://livedocs.adobe.com/labs/flex3/html/help.html?content=ui_reference_3.html Adobe LiveDocs].
 

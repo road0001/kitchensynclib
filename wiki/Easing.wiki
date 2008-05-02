@@ -5,7 +5,7 @@ Easing functions are mathematical functions that are used to interpolate values 
 
 All of the easing functions in KitchenSync take at least two arguments, time elapsed and duration (some also take additional modifier arguments such as frequency or aplitude), and produce results in the range of 0.0 to 1.0 (again, some functions, such as the Elastics may travel outside of that range). This is slightly different from many other versions of easing functions which calculate a start value and end value but I found this to be cleaner and more versatile. 
 
-All of the easing functions are stored as static functions in the `org.as3lib.kitchensync.easing` package. Since you're using KitchenSync, it's not likely that you will be working with the gritty details of easing functions since they're handled automatically within the KSTween class. However, if you need to access them directly, call the function with the [http://mimswright.com/kitchensync/docs/api/com/mimswright/easing/EasingUtil.html#call() EasingUtil.call()] method (more on !EasingUtil below), or use the following syntax.
+All of the easing functions are stored as static functions in the `org.as3lib.kitchensync.easing` package. Since you're using KitchenSync, it's not likely that you will be working with the gritty details of easing functions since they're handled automatically within the KSTween class. However, if you need to access them directly, call the function with the [http://as3lib.org/kitchensync/docs/api/org/as3lib/kitchensync/easing/EasingUtil.html#call() EasingUtil.call()] method (more on !EasingUtil below), or use the following syntax.
 {{{
 newPosition = startPosition + (Cubic.easeIn(timeElapsed, totalDuration) * (endPosition - startPosition));
 }}}
@@ -13,7 +13,7 @@ Many of the easing functions in KitchenSync have been adapted from Robert Penner
 
 ==Demonstration==
 The best way to understand the easing functions is to play around with them. Check out this easing demo. 
-[http://mimswright.com/kitchensync/demo/easing Easing Demo]
+[http://as3lib.org/kitchensync/demo/easing Easing Demo]
 
 ==!EasingUtil==
 Included in the easing package is a utility class called !EasingUtil. This class contains a few methods that make working with easing functions easier. They are...
@@ -23,8 +23,8 @@ Included in the easing package is a utility class called !EasingUtil. This class
 
 ==Hybrid easing functions==
 Some functions in the easing package combine or modify other easing functions to produce new hybrid easing functions with unique characteristics. 
-  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/easing/EasingUtil.html#getAveragedFunction() EasingUtil.getAveragedFunction(easingFunction1, easingFunction2)] - Combines two functions to produce a hybrid – sometimes with very unpredictable results. 
-  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/easing/Stepped.html#getSteppedFunction() Stepped.getSteppedFunction(easingFunction, numberOfSteps)] - Creates a stepped function from another function that generates values that are rounded up or down to create a stair-step motion. Very useful for achieving that '8-bit' look.
+  * [http://as3lib.org/kitchensync/docs/api/org/as3lib/kitchensync/easing/EasingUtil.html#getAveragedFunction() EasingUtil.getAveragedFunction(easingFunction1, easingFunction2)] - Combines two functions to produce a hybrid – sometimes with very unpredictable results. 
+  * [http://as3lib.org/kitchensync/docs/api/org/as3lib/kitchensync/easing/Stepped.html#getSteppedFunction() Stepped.getSteppedFunction(easingFunction, numberOfSteps)] - Creates a stepped function from another function that generates values that are rounded up or down to create a stair-step motion. Very useful for achieving that '8-bit' look.
 
 ==List of easing functions==
 KitchenSync contains the following easing functions. Most you are probably familiar with but there are some new ones in bold.
@@ -83,5 +83,5 @@ KitchenSync contains the following easing functions. Most you are probably famil
 
 
 ==Related Links==
-  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/easing/package-detail.html org.as3lib.kitchensync.easing package API]
+  * [http://as3lib.org/kitchensync/docs/api/org/as3lib/kitchensync/easing/package-detail.html org.as3lib.kitchensync.easing package API]
   * [KSTween KSTweens]

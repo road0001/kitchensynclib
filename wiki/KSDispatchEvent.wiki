@@ -18,7 +18,7 @@ Constructor.
   * `listeners` - Any additional objects passed in will be added as listeners (if they're functions)
 
 ==Related Links==
-  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/KSDispatchEvent.html API Reference]
-  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/AbstractAction.html#addEventTrigger() addEventTrigger()]
-  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/AbstractAction.html#addTrigger() addTrigger()]
+  * [http://as3lib.org/kitchensync/docs/api/org/as3lib/kitchensync/KSDispatchEvent.html API Reference]
+  * [http://as3lib.org/kitchensync/docs/api/org/as3lib/kitchensync/AbstractAction.html#addEventTrigger() addEventTrigger()]
+  * [http://as3lib.org/kitchensync/docs/api/org/as3lib/kitchensync/AbstractAction.html#addTrigger() addTrigger()]
   * [AbstractAction]

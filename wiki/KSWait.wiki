@@ -13,7 +13,7 @@ new Wait(waitTime:*)
 ==Example==
 Creates a [KSSequenceGroup] that moves a square from left to right, uses Wait to pause for 2 seconds, then moves the square from right to left.
 
-[http://mimswright.com/kitchensync/demo/wait/ View demo]
+[http://as3lib.org/kitchensync/demo/wait/ View demo]
 
 {{{
 package

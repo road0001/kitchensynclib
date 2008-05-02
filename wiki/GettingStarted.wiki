@@ -1,6 +1,6 @@
 #summary What you need to get started with KitchenSync
 #labels Featured
-[http://mimswright.com/kitchensync/docs/img/KSToaster.jpg]
+[http://as3lib.org/kitchensync/docs/img/KSToaster.jpg]
 
 =Getting Started=
 This document should help you learn what you need to know to get your first [KitchenSync] project going.
@@ -102,7 +102,7 @@ The next two are the end point and the start point. The sprite will be moved fro
 
 The next two are the duration and offset. These determine the time that the tween will take place. The first is the duration (3 seconds), the second is the offset, or delay, (0 seconds). Note that the time was entered using a string - to read more about that, check out the wiki page for [Timing parsing time strings]. Once the `start()` method is called, the tween will wait for the `offset` time (in this case, 0 seconds) before it starts. After that, the tween will take 3 seconds to complete (unless it's paused or stopped).
 
-The final parameter is the [Easing easing function]. This determines the type of motion you'll see. Try playing around with different ones for various effects. For examples of different easing types, check the [http://mimswright.com/kitchensync/demo/easing/ Easing Demo] and the [Easing Easing wiki page]. Be sure you don't use parentheses when you add an easing function.
+The final parameter is the [Easing easing function]. This determines the type of motion you'll see. Try playing around with different ones for various effects. For examples of different easing types, check the [http://as3lib.org/kitchensync/demo/easing/ Easing Demo] and the [Easing Easing wiki page]. Be sure you don't use parentheses when you add an easing function.
 
 Once it's set up, use the start() method to get things rolling.
 
@@ -185,7 +185,7 @@ sequence.addAction(scaleUp);
 sequence.start();
 }}}
 
-[http://mimswright.com/kitchensync/demo/gettingstarted/ Click here to see the results of this code].
+[http://as3lib.org/kitchensync/demo/gettingstarted/ Click here to see the results of this code].
 
 ==Go Play!==
 There's much more you can do with KitchenSync. I hope to add more to this page but for now the best place to find information is on the other wiki pages or in the [API] reference. 

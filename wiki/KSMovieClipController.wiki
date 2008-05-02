@@ -13,4 +13,4 @@ new KSMovieClipController(offset:*, target:MovieClip, frameIdentifier:*);
 
 ==Links==
   * [AbstractAction]
-  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/KSMovieClipController.html API for this class]
+  * [http://as3lib.org/kitchensync/docs/api/org/as3lib/kitchensync/KSMovieClipController.html API for this class]

@@ -54,5 +54,5 @@ package
 }}}
 
 ==Related Links==
-  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/KSActionController.html API Reference for KSActionController]
-  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/ActionControllerCommand.html API Reference for ActionControllerCommand]
+  * [http://as3lib.org/kitchensync/docs/api/org/as3lib/kitchensync/KSActionController.html API Reference for KSActionController]
+  * [http://as3lib.org/kitchensync/docs/api/org/as3lib/kitchensync/ActionControllerCommand.html API Reference for ActionControllerCommand]

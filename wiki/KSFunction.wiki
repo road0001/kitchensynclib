@@ -19,5 +19,5 @@ var sum:Number = Number(getSum.result); // 15
 }}}
 
 ==Links==
-  * [http://mimswright.com/kitchensync/docs/api/com/mimswright/sync/KSFunction.html API Reference]
+  * [http://as3lib.org/kitchensync/docs/api/org/as3lib/kitchensync/KSFunction.html API Reference]
   * [AbstractAction]
