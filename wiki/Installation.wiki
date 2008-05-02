@@ -23,7 +23,7 @@ In order to 'install' the library, you'll need to follow one of the following pa
 ===Flash CS3 users===
 You'll need to add the source folder (the folder containing !KitchenSync's `/org` folder) to your .fla file's classpath. For information on how to do this, consult the [http://livedocs.adobe.com/flash/9.0/main/wwhelp/wwhimpl/common/html/wwhelp.htm?context=LiveDocs_Parts&file=00000775.html boring Flash documentation].
 
-Remember to `import org.as3lib.kitchensync.*;` or the code won't be recognized by the compiler!
+Remember to import the right packages (`import org.as3lib.kitchensync.*;`) or the code won't be recognized by the compiler!
 
 ===!FlexBuilder users===
 You'll need to add the .swc or the source folder to your project in the Build Path panel of the properties window. For .swc's, click the Library Path tab and then click the 'Add SWC...' or 'Add SWC Folder' to locate the .swc file. For source, click the 'Add Folder...' button on the Source Path tab and navigate to the folder containing the `/com` and `/org` folders for KitchenSync.

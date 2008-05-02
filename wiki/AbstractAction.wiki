@@ -7,7 +7,7 @@ KitchenSync is made up of several types of objects that perform some kind of fun
 Descendants of !AbstractAction can be found in the org.as3lib.kitchensync.action package.
 
 ===Hierarchy===
-Here's a diagram of the inheritance chain as it stands at this point.
+Here's a diagram of the inheritance chain as it stands at this point. (NAMES OF CLASSES ARE OLD)
 [http://as3lib.org/kitchensync/docs/img/synchronizedActionUML.png]
 
 ==States of an action==

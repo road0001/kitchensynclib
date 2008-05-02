@@ -20,8 +20,10 @@ new KSTween(target:Object, property:String, toValue:Number, fromValue:Number = K
 This example creates a box then two tweens that move it to the right and down respectively.
 {{{
 package {
-	import org.as3lib.kitchensync.easing.*;
 	import org.as3lib.kitchensync.*;
+	import org.as3lib.kitchensync.easing.*;
+	import org.as3lib.kitchensync.action.*;
+	import org.as3lib.kitchensync.core.*;
 	import flash.display.*;
 	
 	public class KSTweenDemo extends Sprite {

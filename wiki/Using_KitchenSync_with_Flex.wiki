@@ -18,8 +18,10 @@ This example uses a listener for the `addedToStage` event to move a Canvas and r
 	<mx:Script>
 		<![CDATA[
 			import mx.containers.Canvas;
-			import org.as3lib.kitchensync.easing.*;
 			import org.as3lib.kitchensync.*;
+			import org.as3lib.kitchensync.easing.*;
+			import org.as3lib.kitchensync.action.*;
+			import org.as3lib.kitchensync.core.*;
 		
 			protected function onAddedToStage(evnet:Event):void {
 				stage.frameRate = 50;

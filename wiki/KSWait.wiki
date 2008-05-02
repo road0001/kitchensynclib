@@ -18,8 +18,10 @@ Creates a [KSSequenceGroup] that moves a square from left to right, uses Wait to
 {{{
 package
 {
-	import org.as3lib.kitchensync.easing.*;
 	import org.as3lib.kitchensync.*;
+	import org.as3lib.kitchensync.easing.*;
+	import org.as3lib.kitchensync.action.*;
+	import org.as3lib.kitchensync.core.*;
 	
 	import flash.display.Sprite;
 	

@@ -19,6 +19,9 @@ This example creates a text field and sets the text property after five seconds.
 {{{
 package {
 	import org.as3lib.kitchensync.*;
+	import org.as3lib.kitchensync.easing.*;
+	import org.as3lib.kitchensync.action.*;
+	import org.as3lib.kitchensync.core.*;
 	import flash.display.*;
 	import flash.text.*;
 

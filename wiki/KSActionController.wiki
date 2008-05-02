@@ -24,8 +24,10 @@ The following example will pause a [KSTween tween] partway through its execution
 {{{
 package
 {
-	import org.as3lib.kitchensync.easing.*;
 	import org.as3lib.kitchensync.*;
+	import org.as3lib.kitchensync.easing.*;
+	import org.as3lib.kitchensync.action.*;
+	import org.as3lib.kitchensync.core.*;	
 	
 	import flash.display.Sprite;
 	

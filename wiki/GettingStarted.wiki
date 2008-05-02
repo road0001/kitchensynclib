@@ -8,12 +8,14 @@ This document should help you learn what you need to know to get your first [Kit
 *Note:* All of the examples were built using an *!ActionScript 3.0 project* in Adobe !FlexBuilder 3 beta. If you're using KitchenSync for a _Flex_ project, be sure to read this page on [Using_KitchenSync_with_Flex using KitchenSync with Flex]. For help with setting up and running these examples in Flash CS3 or !FlexBuilder, check out the [Installation installation notes] wiki page.
 
 ==Setting up the [Synchronizer]==
-Before doing anything else, you'll first need to set up the `Synchronizer`. The `Synchronizer` is a utility that dispatches events at every frame and is used as the timing core of [KitchenSync]. To start the `Synchronizer`, use the static method `Synchronizer.initialize()` and pass in a reference to any [http://livedocs.adobe.com/labs/flex3/langref/flash/display/DisplayObject.html DisplayObject]. Don't forget to import `org.as3lib.kitchensync.*`! The reference to the `DisplayObject` allows the Synchronizer to communicate with the `stage` so it can listen for events and get the current frame rate. You can also optionally set the frame rate if you want it to be something other than the default. I recommend doing this at the very beginning of your code in your main application file or in your document class.
+Before doing anything else, you'll first need to set up the `Synchronizer`. The `Synchronizer` is a utility that dispatches events at every frame and is used as the timing core of [KitchenSync]. To start the `Synchronizer`, use the static method `Synchronizer.initialize()` and pass in a reference to any [http://livedocs.adobe.com/labs/flex3/langref/flash/display/DisplayObject.html DisplayObject]. Don't forget to import the right packages! The reference to the `DisplayObject` allows the Synchronizer to communicate with the `stage` so it can listen for events and get the current frame rate. You can also optionally set the frame rate if you want it to be something other than the default. I recommend doing this at the very beginning of your code in your main application file or in your document class.
 
 {{{
 package {
 
 	import org.as3lib.kitchensync.*;
+	import org.as3lib.kitchensync.core.*;
+	import org.as3lib.kitchensync.action.*;
 	
 	import flash.display.Sprite;
 	
@@ -66,8 +68,11 @@ A [KSTween Tween] is an animation be-tween two key points. It uses the [KSTween]
 Our first demo will first create a rectangle to play with. After that, we'll use a [KSTween] object to move the rectangle from x=0 to x=300 over the course of 3 seconds.
 {{{
 package {
-	import org.as3lib.kitchensync.easing.*;
 	import org.as3lib.kitchensync.*;
+	import org.as3lib.kitchensync.core.*;
+	import org.as3lib.kitchensync.action.*;
+	import org.as3lib.kitchensync.easing.*;
+
 	import flash.display.*;
 	
 	public class KSTutorial extends Sprite {
@@ -94,7 +99,7 @@ package {
 }
 }}}
 
-Let's take a quick look at the syntax of the tween. 
+Let's take a quick look at the syntax of [KSTween]. 
 
 The first two are the target object and the name property to change (representing `sprite.x`). The target can be any object (except primatives) and the property can be any numeric property. 
 
@@ -126,8 +131,10 @@ There are three kind of groups [KSSequenceGroup], [KSParallelGroup], and [KSStag
 The code below will create a new Sequence and add the x and y tweens using the constructor. Then we'll use the `addAction()` method and the `cloneReversed()` method to create the reversed animation back to the starting point
 {{{
 package {
-	import org.as3lib.kitchensync.easing.*;
 	import org.as3lib.kitchensync.*;
+	import org.as3lib.kitchensync.core.*;
+	import org.as3lib.kitchensync.action.*;
+	import org.as3lib.kitchensync.easing.*;
 	
 	import flash.display.*;
 	
