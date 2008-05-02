@@ -3,7 +3,7 @@
 
 Behind the scenes, a class called `Synchronizer` acts as a timing clock for all of the [AbstractAction synchronized action]. Each time an action starts, the `Synchronizer` adds it to a sort of virtual timeline.
 
-[http://www.mimswright.com/kitchensync/docs/img/virtualTimeline.png]
+[http://www.as3lib.org/kitchensync/docs/img/virtualTimeline.png]
 
 _Fig - Synchronizer assigns actions to a 'virtual timeline'._
 

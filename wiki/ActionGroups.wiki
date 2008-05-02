@@ -12,7 +12,7 @@ The types of groups are:
   * [KSParallelGroup]
   * [KSStaggeredGroup]
 
-http://www.mimswright.com/kitchensync/docs/img/actionGroups.png
+http://www.as3lib.org/kitchensync/docs/img/actionGroups.png
 
 Groups can be used in conjunction with one another. For example, you may wish to create a [KSSequenceGroup sequence] that contains a [KSParallelGroup parallel] action so that you can have several actions occur at the same point in a sequence.
 

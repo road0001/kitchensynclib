@@ -21,7 +21,6 @@ package {
 	import org.as3lib.kitchensync.*;
 	import org.as3lib.kitchensync.easing.*;
 	import org.as3lib.kitchensync.action.*;
-	import org.as3lib.kitchensync.core.*;
 	import flash.display.*;
 	import flash.text.*;
 
@@ -29,7 +28,7 @@ package {
 	{
 		public function SetPropertyDemo()
 		{
-			Synchronizer.initialize(this);
+			KitchenSync.initialize(this);
 			
 			var info:TextField = new TextField();
 			info.autoSize = TextFieldAutoSize.LEFT;

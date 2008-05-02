@@ -21,14 +21,13 @@ package
 	import org.as3lib.kitchensync.*;
 	import org.as3lib.kitchensync.easing.*;
 	import org.as3lib.kitchensync.action.*;
-	import org.as3lib.kitchensync.core.*;
 	
 	import flash.display.Sprite;
 	
 	public class WaitDemo extends Sprite
 	{
 		public function WaitDemo() {
-			Synchronizer.initialize(this);
+			KitchenSync.initialize(this);
 			
 			// Draw a rectangle to use for demonstrations.
 			var sprite:Sprite = new Sprite();

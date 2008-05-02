@@ -7,14 +7,13 @@ This document should help you learn what you need to know to get your first [Kit
 
 *Note:* All of the examples were built using an *!ActionScript 3.0 project* in Adobe !FlexBuilder 3 beta. If you're using KitchenSync for a _Flex_ project, be sure to read this page on [Using_KitchenSync_with_Flex using KitchenSync with Flex]. For help with setting up and running these examples in Flash CS3 or !FlexBuilder, check out the [Installation installation notes] wiki page.
 
-==Setting up the [Synchronizer]==
-Before doing anything else, you'll first need to set up the `Synchronizer`. The `Synchronizer` is a utility that dispatches events at every frame and is used as the timing core of [KitchenSync]. To start the `Synchronizer`, use the static method `Synchronizer.initialize()` and pass in a reference to any [http://livedocs.adobe.com/labs/flex3/langref/flash/display/DisplayObject.html DisplayObject]. Don't forget to import the right packages! The reference to the `DisplayObject` allows the Synchronizer to communicate with the `stage` so it can listen for events and get the current frame rate. You can also optionally set the frame rate if you want it to be something other than the default. I recommend doing this at the very beginning of your code in your main application file or in your document class.
+==Setting up KitchenSync==
+Before doing anything else, you'll first need to set up KitchenSync. This will set up the `Synchronizer` which is a utility that dispatches events at every frame and is used as the timing core of [KitchenSync]. To start KitchenSync, use the static method `KitchenSync.initialize()` and pass in a reference to any [http://livedocs.adobe.com/labs/flex3/langref/flash/display/DisplayObject.html DisplayObject]. Don't forget to import the right packages! The reference to the `DisplayObject` allows the Synchronizer to communicate with the `stage` so it can listen for events and get the current frame rate. You can also optionally set the frame rate if you want it to be something other than the default. I recommend doing this at the very beginning of your code in your main application file or in your document class.
 
 {{{
 package {
 
 	import org.as3lib.kitchensync.*;
-	import org.as3lib.kitchensync.core.*;
 	import org.as3lib.kitchensync.action.*;
 	
 	import flash.display.Sprite;
@@ -25,18 +24,18 @@ package {
 		{
 			// set framerate to 30 frames per second
 			stage.frameRate = 30;
-			// start the Synchronizer. You'll only need to do this once.
-			Synchronizer.initialize(this);
+			// start KitchenSync. You'll only need to do this once.
+			KitchenSync.initialize(this);
 		}
 	}
 }
 
 }}}
 
-After this, your Synchronizer is set. Since you don't need to register actions, you probably won't need to access it again but if you do, you can use `Synchronizer.getInstance()`.
+After this, your KitchenSync is running. Since you don't need to register actions, you probably won't need to access it again.
 
 ==Running your first [AbstractAction action]==
-To test that Synchronizer was set up properly, try running a simple script. For this, you'll use the [KSTrace] class which simply displays a trace statement after a set amount of time. 
+To test that KitchenSync was set up properly, try running a simple script. For this, you'll use the [KSTrace] class which simply displays a trace statement after a set amount of time. 
 The first argument is the message to display. This is usually a string but you can also pass in an Object as you would with the `trace()` statement. If you pass in an object, the resutls of its `toString()` method will be displayed.
 The second argument is the _offset_, or delay, before the trace statement is displayed. The default [Timing unit of time] for this is milliseconds so the number 5000 = 5 seconds.
 {{{
@@ -69,7 +68,6 @@ Our first demo will first create a rectangle to play with. After that, we'll use
 {{{
 package {
 	import org.as3lib.kitchensync.*;
-	import org.as3lib.kitchensync.core.*;
 	import org.as3lib.kitchensync.action.*;
 	import org.as3lib.kitchensync.easing.*;
 
@@ -79,8 +77,8 @@ package {
 		public function KSTutorial() {
 			// set framerate to 30 frames per second
 			stage.frameRate = 30;
-			// start the Synchronizer. You'll only need to do this once.
-			Synchronizer.initialize(this);
+			// start KitchenSync. You'll only need to do this once.
+			KitchenSync.initialize(this);
 			
 			// display a message after 5 seconds.
 			var message:KSTrace = new KSTrace("HELLO, WORLD ... Sorry I'm late!", 5000);
@@ -132,7 +130,6 @@ The code below will create a new Sequence and add the x and y tweens using the c
 {{{
 package {
 	import org.as3lib.kitchensync.*;
-	import org.as3lib.kitchensync.core.*;
 	import org.as3lib.kitchensync.action.*;
 	import org.as3lib.kitchensync.easing.*;
 	
@@ -142,8 +139,8 @@ package {
 		public function KSTutorial() {
 			// set framerate to 30 frames per second
 			stage.frameRate = 30;
-			// start the Synchronizer. You'll only need to do this once.
-			Synchronizer.initialize(this);
+			// start KitchenSync. You'll only need to do this once.
+			KitchenSync.initialize(this);
 			
 			// display a message after 5 seconds.
 			var message:KSTrace = new KSTrace("HELLO, WORLD ... Sorry I'm late!", 5000);
