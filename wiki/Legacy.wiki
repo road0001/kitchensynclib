@@ -1,0 +1,12 @@
+#Help for legacy users.
+
+This page is here to help you when there have been conversions that affect legacy code. The most recent one is the change between v1.1 and v1.2. 
+
+=Naming Changes=
+[http://spreadsheets.google.com/pub?key=pIE-vTZCHHbSyu2Kwb_VWEQ&output=html&gid=0&single=true Click to see the changes to class names]
+
+=Package Changes=
+[http://spreadsheets.google.com/pub?key=pIE-vTZCHHbSyu2Kwb_VWEQ&output=html&gid=1&single=true Click here to see the new package structure]
+
+=Other changes=
+  * `Synchronizer.initialize()` has been replaced with `KitchenSync.initialize()`
