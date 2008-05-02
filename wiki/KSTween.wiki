@@ -52,6 +52,6 @@ package {
 }}}
 
 ==Related Links==
-  * [http://as3lib.org/kitchensync/docs/api/org/as3lib/kitchensync/KSTween.html API Reference]
+  * [http://as3lib.org/kitchensync/docs/api/org/as3lib/kitchensync/action/KSTween.html API Reference]
   * [AbstractAction]
   * [Easing Easing Functions]

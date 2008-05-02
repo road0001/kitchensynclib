@@ -19,7 +19,7 @@ Groups can be used in conjunction with one another. For example, you may wish to
 With all of the action groups, separate events are dispatched upon completion of individual items and of the entire group.
 
 ==Related Links==
-  * [http://as3lib.org/kitchensync/docs/api/org/as3lib/kitchensync/AbstractActionGroup.html API Reference for AbstractActionGroup]
+  * [http://as3lib.org/kitchensync/docs/api/org/as3lib/kitchensync/action/AbstractActionGroup.html API Reference for AbstractActionGroup]
   * [http://en.wikipedia.org/wiki/Composite_pattern Composite Design Pattern]
   * [KSSequenceGroup]
   * [KSParallelGroup]

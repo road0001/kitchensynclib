@@ -12,4 +12,4 @@ new KSTrace(message:*, offset:* = 0)
   * `offset` - The delay before the message is displayed.
 
 ==Links==
-[http://as3lib.org/kitchensync/docs/api/org/as3lib/kitchensync/KSTrace.html API Reference for KSTrace]
+[http://as3lib.org/kitchensync/docs/api/org/as3lib/kitchensync/action/KSTrace.html API Reference for KSTrace]

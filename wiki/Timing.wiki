@@ -9,7 +9,7 @@ Using an integer value to set a duration will use milliseconds as the unit of ti
 ~~[KitchenSync KitchenSync] supports multiple time units so that it might best fit your project's needs.~~ _TimeUnits have been removed from version 1.1 since they were becoming unmanageable and the TimeStringParser seemed to do pretty much the same thing._
 
 ==Parsing time strings==
-Because of some magic behind the scenes ([http://as3lib.org/kitchensync/docs/api/org/as3lib/kitchensync/TimeStringParser_en.html TimeStringParser_en]), KitchenSync is able to automatically parse a string value into milliseconds. When using the constructor for any of the actions in KitchenSync, try passing in an English language string with numbers and units such as "1.5 seconds" or "15min". 
+Because of some magic behind the scenes ([http://as3lib.org/kitchensync/docs/api/org/as3lib/kitchensync/util/TimeStringParser_en.html TimeStringParser_en]), KitchenSync is able to automatically parse a string value into milliseconds. When using the constructor for any of the actions in KitchenSync, try passing in an English language string with numbers and units such as "1.5 seconds" or "15min". 
 The following lines are all functionally equivelant...
 {{{
 new KSTrace("Five seconds have elapsed.", "5 seconds");

@@ -13,4 +13,4 @@ new KSStaggeredGroup(stagger:*, ... children)
 
 ==Related Links==
   * [AbstractActionGroup]
-  * [http://as3lib.org/kitchensync/docs/api/org/as3lib/kitchensync/KSStaggeredGroup.html API Reference]
+  * [http://as3lib.org/kitchensync/docs/api/org/as3lib/kitchensync/action/KSStaggeredGroup.html API Reference]
