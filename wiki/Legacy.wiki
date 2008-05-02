@@ -1,4 +1,4 @@
-# Help for legacy users.
+#summary Help for legacy users.
 
 This page is here to help you when there have been conversions that affect legacy code. The most recent one is the change between v1.1 and v1.2. 
 
