@@ -14,5 +14,12 @@ To convert from 1.1 to 1.2 or later, I suggest that you
 ==Package Changes==
 [http://spreadsheets.google.com/pub?key=pIE-vTZCHHbSyu2Kwb_VWEQ&output=html&gid=1&single=true Click here to see the new package structure]
 
+  * org.as3lib.kitchensync - Contains the new KitchenSync class and the KitchenSyncDefaults. These are global classes that control the entire system.
+  * org.as3lib.kitchensync.easing - Contains all the easing function classes.
+  * org.as3lib.kitchensync.action - Contains all Actions
+  * org.as3lib.kitchensync.action.tweenable - Contains classes that represent properties that can be tweened.
+  * org.as3lib.kitchensync.core - Contains the internal workings of the system
+  * org.as3lib.kitchensync.util - Contains helper classes.
+
 ==Other changes==
   * `Synchronizer.initialize()` has been replaced with `KitchenSync.initialize()`
