@@ -19,7 +19,7 @@ To convert from 1.1 to 1.2 or later, I suggest that you
   * org.as3lib.kitchensync.action - Contains all Actions
   * org.as3lib.kitchensync.action.tweenable - Contains classes that represent properties that can be tweened.
   * org.as3lib.kitchensync.core - Contains the internal workings of the system
-  * org.as3lib.kitchensync.util - Contains helper classes.
+  * org.as3lib.kitchensync.utils (util in 1.2) - Contains helper classes. 
 
 ==Other changes==
   * `Synchronizer.initialize()` has been replaced with `KitchenSync.initialize()`
