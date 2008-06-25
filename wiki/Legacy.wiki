@@ -1,6 +1,6 @@
 #summary Help for legacy users.
 
-This page is here to help you when there have been conversions that affect legacy code. *Remember to always check the [changelog] for a list of updates to each version!*
+This page is here to help you when there have been conversions that affect legacy code. *Remember to always check the [ChangeLog change log] for a list of updates to each version!*
 
 ===Converting to 1.2 and later===
 To convert to version 1.2 or later, I suggest that you 
