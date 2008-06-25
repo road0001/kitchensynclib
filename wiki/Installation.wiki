@@ -21,6 +21,7 @@ If you use any other platform you can choose between the two. The pre-compiled .
 In order to 'install' the library, you'll need to follow one of the following paths.
 
 ===Flash CS3 users===
+First, seriously consider using !FlexBuilder. The code completion features make working with KitchenSync much simpler.
 You'll need to add the source folder (the folder containing !KitchenSync's `/org` folder) to your .fla file's classpath. For information on how to do this, consult the [http://livedocs.adobe.com/flash/9.0/main/wwhelp/wwhimpl/common/html/wwhelp.htm?context=LiveDocs_Parts&file=00000775.html boring Flash documentation].
 
 Remember to import the right packages (`import org.as3lib.kitchensync.*;`) or the code won't be recognized by the compiler!
