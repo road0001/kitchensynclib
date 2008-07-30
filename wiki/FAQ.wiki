@@ -3,6 +3,9 @@
 
 There's not many answers on here... [mailto:mimshwright@gmail.com ASK MORE QUESTIONS]!
 
+===Q. Why should I use KitchenSync?===
+A. Here are [http://dispatchevent.org/mims/ks-20reasons/ 20 reasons]
+
 ===Q. What is the file size of KitchenSync?===
 A. The size of KS depends on how much of the library you use in your project. By my calculations, the entire library, including all the easing functions, is around *18KB*, however, it's unlikely that your project would use all of the classes. For simple tweening with sequences and limited easing functions, the size is closer to *10KB*.
 
