@@ -1,17 +1,19 @@
 #summary An action used to animate a numeric property of an object such as its position.
 #labels Actions
 
+*Note, the way tweens work has changed slightly as of version 1.5. Now, KSTween objects use ITweenTarget objects to control the values that are tweened. Also, when creating a new tween, the syntax is from `startValue` to `endValue` (it used to be the other way around)*
+
 ==Summary==
 Perhaps the most used action is the KSTween. A tween is an object that represents a change of a property from one value to another over time. However, in most cases, the word tween is more likely to be synonymous with an animation be-*tween* two key points. A tween object has a target object (usually a display object) whose properties are affected, a target property, a duration, a start value and an end value. KSTweens also use a special type of function, called an [Easing easing function], to determine the interpolation from the start to the ending values.
 
 ==Syntax==
 {{{
-new KSTween(target:Object, property:String, toValue:Number, fromValue:Number = KSTween.EXISTING_FROM_VALUE, duration:* = 0, offset:* = 0, easingFunction:Function = null);
+new KSTween(target:Object, property:String, startValue:Number, endValue:Number = KSTween.EXISTING_FROM_VALUE, duration:* = 0, offset:* = 0, easingFunction:Function = null);
 }}}
   * `target` - the object whose property will be changed.
   * `property` - the name of the property to change. The property must be a Number, int or uint such as a `Sprite` object's "alpha"
-  * `toValue` - the value to tween the property to. After the tween is done, this will be the value of the property. (*Note:* The end value comes before the start value because the start value is optional)
-  * `fromValue` - the starting value of the tween. By default, this is the value of the property before the tween.
+  * `startValue` - the starting value of the tween. By default, this is the value of the property before the tween.
+  * `endValue` - the value to tween the property to. After the tween is done, this will be the value of the property. 
   * `duration` - the time in frames that this tween will take to execute.
   * `offset` - the time to wait before starting the tween.
   * `easingFunction` - the function to use to interpolate the values between fromValue and toValue.
@@ -39,7 +41,7 @@ package {
 			addChild(sprite);
 			
 			// move the rectangle from left to right.
-			var tweenX:KSTween = new KSTween(sprite, "x", 300, 0, "3sec", "0sec", Cubic.easeInOut);
+			var tweenX:KSTween = new KSTween(sprite, "x", 0, 300, "3sec", "0sec", Cubic.easeInOut);
 			// apply the same animation to the y property.
 			var tweenY:KSTween = tweenX.cloneWithTarget(sprite, "y");
 			
