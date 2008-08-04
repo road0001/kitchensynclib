@@ -60,7 +60,7 @@ package {
 			// Create a tween to move the rectangle from left to right using the constructor. 
 			var tweenX:KSTween = new KSTween(sprite, "x", 0, 300, "3sec", "0sec", Cubic.easeInOut);
 			
-			// If you want to use custom tween targets, replace the above lines with the following. 
+			// If you want to use custom tween targets, replace the line above with the following. 
 			// var tweenTargetX:TargetProperty = new TargetProperty(sprite, "x", 0, 300);
 			// var tweenX:KSTween = KSTween.newWithTweenTarget(tweenTargetX, "3s", 0, Cubic.easeInOut);
 			
