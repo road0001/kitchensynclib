@@ -39,7 +39,7 @@ As a safety feature, you can add a string for the version number of KitchenSync 
 {{{
 KitchenSync.initialize(this, "1.5");
 }}}
-This will throw an error if the version number of the library that you're expecting is incorrect and can help prevent unexpected results. 
+This will throw an error if the version number of the library isn't what you're expecting. This can help prevent unexpected results when you upgrade the library. 
 
 ==Running your first [AbstractAction action]==
 To test that KitchenSync was set up properly, try running a simple script. For this, you'll use the [KSTrace] class which simply displays a trace statement after a set amount of time. 
