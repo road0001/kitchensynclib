@@ -4,7 +4,7 @@
 *Note, the way tweens work has changed slightly as of version 1.5. Now, KSTween objects use ITweenTarget objects to control the values that are tweened. Also, when creating a new tween, the syntax is from `startValue` to `endValue` (it used to be the other way around)*
 
 ==Summary==
-Perhaps the most used action is the KSTween. A tween is an object that represents a change of a property from one value to another over time. However, in most cases, the word tween is more likely to be synonymous with an animation be-*tween* two key points. A tween object has a target object (usually a display object) whose properties are affected, a target property, a duration, a start value and an end value. KSTweens also use a special type of function, called an [Easing easing function], to determine the interpolation from the start to the ending values.
+Perhaps the most used action is the KSTween. It represents a tween - an object that changes a numeric value over time. KSTweens work in conjunction with [tween_targets ITweenTarget] classes. A tween object has a target object (usually a display object) whose properties are affected, a target property, a duration, a start value and an end value. KSTweens also use a special type of function, called an [Easing easing function], to determine the interpolation from the start to the ending values.
 
 ==Syntax==
 {{{
