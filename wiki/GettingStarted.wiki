@@ -34,6 +34,13 @@ package {
 
 After this, your KitchenSync is running. Since you don't need to register actions, you probably won't need to access it again.
 
+===A note on the version check parameter===
+As a safety feature, you can add a string for the version number of KitchenSync you're expecting to the `initialize()` method like this.
+{{{
+KitchenSync.initialize(this, "1.5");
+}}}
+This will throw an error if the version number of the library that you're expecting is incorrect and can help prevent unexpected results. 
+
 ==Running your first [AbstractAction action]==
 To test that KitchenSync was set up properly, try running a simple script. For this, you'll use the [KSTrace] class which simply displays a trace statement after a set amount of time. 
 The first argument is the message to display. This is usually a string but you can also pass in an Object as you would with the `trace()` statement. If you pass in an object, the resutls of its `toString()` method will be displayed.
