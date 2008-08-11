@@ -3,12 +3,12 @@
 
 = Introduction =
 
-FilterTargetProperty allows you to setup a custom [Tween_Targets TweenTarget] for filters.
+FilterTargetProperty allows you to tween filters by setting up a custom [Tween_Targets TweenTarget] for properties of filters.
 
 
 = Example =
-This example 
-{{{{
+This example will change the distance of a drop shadow over time.
+{{{
 package {
 	import flash.display.*;
 	import flash.filters.*;
@@ -39,7 +39,7 @@ package {
 
                        //Create the new FilterTargetProperty Object
                        var dropShadowFTP:FilterTargetProperty = new FilterTargetProperty(sprite,DropShadowFilter,"distance",0,100);
-                       //Use the new TweenTarget object in a tween definition. The important part is the use of the newWithTweenTarget method.
+                       //Use the new TweenTarget object in a tween definition. Remember to use the newWithTweenTarget() method to instantiate it.
                        var dropShadowTween:KSTween = KSTween.newWithTweenTarget(dsTargetProp, "5sec", 0,Elastic.easeOut);
                        
                        //Start the tween.
@@ -48,3 +48,7 @@ package {
 	}
 }
 }}}
+
+==Related Links==
+  * [Tween_Targets Tween targets]
+  * [http://as3lib.org/kitchensync/docs/api/org/as3lib/kitchensync/action/tweentarget/FilterTargetProperty.html API reference]
