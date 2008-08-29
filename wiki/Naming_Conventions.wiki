@@ -2,6 +2,6 @@
 
 While making KitchenSync, I've done my best to use naming conventions set by Adobe and others in the Flash Community. In addition to these, here are some conventions that are specific to KitchenSync
 
-  * An object that performs some action at a certain time and is controlled by the [Synchronizer] is called an [AbstractAction action]. All action classes have the prefix `KS` in their names. In other words, any object whose type begins with `KS` can be run by the Synchronizer.
+  * An object that performs some action at a certain time and is controlled by the [Synchronizer] is called an [AbstractAction action]. All action classes have the prefix `KS` in their names (e.g. KSTween, KSFunction). In other words, any object whose type begins with `KS` can be run by the Synchronizer.
   * Classes that are [AbstractActionGroup groups] of actions have the suffix `Group` in their names.
   * [http://java.sun.com/docs/books/tutorial/java/IandI/abstract.html Abstract classes] are classes that should not be instantiated themselves but provide a default implementation for the classes that extend them. In KS, these are marked with the prefix `Abstract`.
