@@ -1,0 +1,8 @@
+#summary A sequence group that pauses between each child executing
+#labels Actions,Incomplete-Example
+
+This group is designed to be used in slideshow and powerpoint type applications. It is a sequence group that pauses automatically after the execution of each child action. The next child in the sequence will be played after the group is unpaused. This behaviour continues until all of the children have been executed.
+
+
+= Related Links =
+  * [KSSequenceGroup]
