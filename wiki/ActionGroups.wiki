@@ -11,6 +11,9 @@ The types of groups are:
   * [KSSequenceGroup]
   * [KSParallelGroup]
   * [KSStaggeredGroup]
+  * [KSSimultaneousEndGroup]
+  * [KSSteppedSequenceGroup]
+  * [KSRandomGroup]
 
 http://www.as3lib.org/kitchensync/docs/img/actionGroups.png
 
@@ -24,3 +27,6 @@ With all of the action groups, separate events are dispatched upon completion of
   * [KSSequenceGroup]
   * [KSParallelGroup]
   * [KSStaggeredGroup]
+  * [KSSimultaneousEndGroup]
+  * [KSSteppedSequenceGroup]
+  * [KSRandomGroup]
