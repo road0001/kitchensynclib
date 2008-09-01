@@ -6,7 +6,7 @@ This [AbstractAction action] simply waits for the duration specified then ends. 
 
 ==Syntax==
 {{{
-new Wait(waitTime:*)
+new KSWait(waitTime:*)
 }}}
   * `waitTime` - The wait time (offset)
 
@@ -41,7 +41,7 @@ package
 			var tween2:KSTween = tween.cloneReversed();
 			
 			// add a 2 second pause after the square moves before returning it back to it's start position.
-			var group:KSSequenceGroup = new KSSequenceGroup(tween, new Wait("2s"), tween2);
+			var group:KSSequenceGroup = new KSSequenceGroup(tween, new KSWait("2s"), tween2);
 			group.start();
 		}
 	}
