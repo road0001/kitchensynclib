@@ -41,7 +41,8 @@ package
 			var tween2:KSTween = tween.cloneReversed();
 			
 			// add a 2 second pause after the square moves before returning it back to it's start position.
-			var group:KSSequenceGroup = new KSSequenceGroup(tween, new KSWait("2s"), tween2);
+                        var wait:KSWait = new KSWait("2s");
+			var group:KSSequenceGroup = new KSSequenceGroup(tween, wait, tween2);
 			group.start();
 		}
 	}
