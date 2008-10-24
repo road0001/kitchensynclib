@@ -20,7 +20,7 @@ package {
 	
 	public class KSTutorial extends Sprite
 	{
-		public function KitchenSyncDemoOld()
+		public function KSTutorial ()
 		{
 			// set framerate to 30 frames per second
 			stage.frameRate = 30;
