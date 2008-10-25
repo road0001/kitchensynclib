@@ -21,6 +21,10 @@ Groups can be used in conjunction with one another. For example, you may wish to
 
 With all of the action groups, separate events are dispatched upon completion of individual items and of the entire group.
 
+= Example =
+In this example, 5 shapes are tweened from left to right with each of the various group types. The black circles each take 2 seconds and the red square takes 4 seconds (this is to show how the simultaneous end group works differently from the parallel group)
+[http://as3lib.org/kitchensync/demo/groups Demo: Action Groups]
+
 ==Related Links==
   * [http://as3lib.org/kitchensync/docs/api/org/as3lib/kitchensync/action/AbstractActionGroup.html API Reference for AbstractActionGroup]
   * [http://en.wikipedia.org/wiki/Composite_pattern Composite Design Pattern]
