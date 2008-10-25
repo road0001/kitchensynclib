@@ -23,6 +23,7 @@ With all of the action groups, separate events are dispatched upon completion of
 
 = Example =
 In this example, 5 shapes are tweened from left to right with each of the various group types. The black circles each take 2 seconds and the red square takes 4 seconds (this is to show how the simultaneous end group works differently from the parallel group)
+
 [http://as3lib.org/kitchensync/demo/groups Demo: Action Groups]
 
 ==Related Links==
