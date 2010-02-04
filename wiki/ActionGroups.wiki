@@ -1,5 +1,5 @@
 #summary Groups of actions that contain child actions and are themselves actions.
-#labels Actions
+#labels Actions,Deprecated
 
 = Summary =
 Action Groups are special types of [AbstractAction actions] that contain sets of other actions which can be controlled simultaneously. All action groups implement the `IActionGroup` interface. 
