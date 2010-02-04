@@ -1,5 +1,5 @@
 #summary An action used to control other actions.
-#labels Actions
+#labels Actions,Deprecated
 
 =Action Controllers and Commands=
 An action controller is a type of action that sends _commands_ to other [AbstractAction action] objects such as stop, start, or pause. The commands that can be executed are stored in the enumeration class `ActionControllerCommand`.  They include...
