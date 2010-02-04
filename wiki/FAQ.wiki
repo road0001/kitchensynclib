@@ -1,5 +1,5 @@
 #summary Answers to Frequently Asked Questions
-#labels Featured,Incomplete-MoreDetails
+#labels Featured,Incomplete-MoreDetails,Deprecated
 
 There's not many answers on here... [mailto:mimshwright@gmail.com ASK MORE QUESTIONS]!
 
