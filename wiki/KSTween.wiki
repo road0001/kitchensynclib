@@ -1,5 +1,5 @@
 #summary An action used to animate a numeric property of an object such as its position.
-#labels Actions
+#labels Actions,Deprecated
 
 *Note, the way tweens work has changed slightly as of version 1.5. Now, KSTween objects use ITweenTarget objects to control the values that are tweened. Also, when creating a new tween, the syntax is from `startValue` to `endValue` (it used to be the other way around)*
 
