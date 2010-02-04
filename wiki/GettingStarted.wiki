@@ -7,4 +7,4 @@ This document should help you learn what you need to know to get your first [Kit
 
 [http://kitchensync.as3lib.org/manual/ Online User Manual]
 
-[http://kitchensync.as3lib.org/docs/ Online ASDocs]
+[http://kitchensync.as3lib.org/docs/ Online ASDocs] 
