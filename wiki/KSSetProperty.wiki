@@ -1,5 +1,5 @@
 #summary An action to set any property of an object.
-#labels Actions
+#labels Actions,Deprecated
 
 ==Summary==
 [AbstractAction Action] to set a property for any object to a specified value after some delay.

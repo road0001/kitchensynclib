@@ -1,5 +1,5 @@
 #summary An action to control playback of a movie clip.
-#labels Actions,Incomplete-Example
+#labels Actions,Incomplete-Example,Deprecated
 
 [AbstractAction action] to tell a `MovieClip` object to play a specified frame.
 

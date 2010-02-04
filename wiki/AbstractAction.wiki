@@ -1,5 +1,5 @@
 #summary Actions are the time-based functionality of KitchenSync sequenced by the Synchronizer.
-#labels Actions,Incomplete-MoreDetails
+#labels Actions,Incomplete-MoreDetails,Deprecated
 
 =Actions=
 KitchenSync is made up of several types of objects that perform some kind of function and are timed by the Synchronizer. These objects are called _actions_. All actions are subclasses of the abstract class `AbstractAction`. 

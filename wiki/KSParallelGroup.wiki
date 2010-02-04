@@ -1,4 +1,4 @@
 #summary An action group that executes all of its child actions simultaneously.
-#labels Actions,Incomplete-MoreDetails,Incomplete-Example
+#labels Actions,Incomplete-MoreDetails,Incomplete-Example,Deprecated
 
 With Parallel [ActionGroups groups], all actions within the group are executed simultaneously. Although they all start at the same time, they may end at different times.

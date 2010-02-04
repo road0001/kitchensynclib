@@ -1,5 +1,5 @@
 #summary An action to dispatch an AS3 event.
-#labels Actions,Incomplete-Example
+#labels Actions,Incomplete-Example,Deprecated
 ==Summary==
 An [AbstractAction action] that causes an event to be dispatched at the time of execution. 
 
