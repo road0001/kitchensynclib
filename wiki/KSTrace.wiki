@@ -1,5 +1,5 @@
 #summary Traces a message to the output window after some delay.
-#labels Actions,Incomplete-Example
+#labels Actions,Incomplete-Example,Deprecated
 
 ==Summary==
 `KSTrace` is a subclass of [KSFunction] that runs a `trace()` statement after a delay (offset). 
