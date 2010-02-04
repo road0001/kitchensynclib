@@ -1,2 +1,3 @@
 #summary The abstract class for a group of child actions that are treated as a whole.
+#labels Deprecated
 =See [ActionGroups]=
