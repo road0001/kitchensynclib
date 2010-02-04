@@ -1,0 +1,3 @@
+#summary The place to start to learn KitchenSync
+
+[http://kitchensync.as3lib.org/manual/]
