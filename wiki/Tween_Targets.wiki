@@ -1,4 +1,5 @@
 #summary Tween targets represent the value being changed by a tween.
+#labels Deprecated
 
 = Introduction =
 
