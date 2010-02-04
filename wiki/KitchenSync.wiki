@@ -1,4 +1,5 @@
 #summary Overview of the project.
+#labels Deprecated
 [http://as3lib.org/kitchensync/docs/img/KSLogo.png]
 
 =!KitchenSync is an !ActionScript 3.0 library for sequencing animations and other time-based actions.=
