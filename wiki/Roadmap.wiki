@@ -20,14 +20,15 @@ Furthermore, this project hopes to encourage community interaction and respond t
   * Tackle the most common needs of library users including tweens and timed functions.
   * Release the library open source on Google Code.
 
-===Version 2.0===
+===Version 2.0 *_Complete!_*===
   * Analyze the other major tweening libraries in detail.
   * Create a backlog that attempts to match other libraries in performance, ease-of-use, and functionality.
   * Fix any outstanding bugs from version 1.0
 
 ===Version 3.0 and beyond===
-  * Continue implementing product backlog from v2.0
-  * Maintain focus on the goals of the project.
+  * Involve more people from the community
+  * Fix any remaining bugs
+  * Add support for Flash Player 10 and adapters for other tween libraries
 
 ==Related Links==
   * [ChangeLog]
