@@ -1,4 +1,5 @@
 #summary Information about parsing time strings, and sync mode.
+#labels Deprecated
 =Time string parsing, and sync mode=
 
 Most times in KithcenSync such as duration and offset can be entered using integers or strings. Many different methods for entering times are provided to make KitchenSync versatile enough to work with several types of applications.
