@@ -1,4 +1,5 @@
 #summary Help for legacy users.
+#labels Deprecated
 
 This page is here to help you when there have been conversions that affect legacy code. *Remember to always check the [ChangeLog change log] for a list of updates to each version!*
 
