@@ -1,0 +1,1 @@
+With Parallel [groups](ActionGroups.md), all actions within the group are executed simultaneously. Although they all start at the same time, they may end at different times.
